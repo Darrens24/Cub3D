@@ -39,7 +39,7 @@ $(NAME): $(OBJS)
 	@echo ${LIGHTBLUE}Libft compiling !${NOCOLOR}
 	@make -C ./Libft
 	@echo ${LIGHTBLUE}$(NAME) compiling !${NOCOLOR}
-	@$(CC) $(CFLAGS) -LLibft -lft -I ./headers $(OBJS) -o $@
+	@$(CC) $(CFLAGS) -I ./headers $(OBJS) -o $@ ./Libft/libft.a
 	@echo ${LIGHTGREEN}$(NAME) compiled !${NOCOLOR}
 
 clean:
