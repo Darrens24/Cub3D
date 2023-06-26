@@ -11,10 +11,19 @@
 #include <stdlib.h>
 #include <unistd.h>
 
+typedef struct s_point {
+  int x;
+  int y;
+} t_point;
+
 typedef struct s_cub {
   char **map;
-
+  uint map_width;
+  uint map_height;
+  char p_orient;
+  struct s_point p;
 } t_cub;
+
 #endif
 
 /*

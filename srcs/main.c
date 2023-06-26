@@ -46,6 +46,8 @@ int download_map(t_cub *cub, char *av1) {
 
   fd = 0;
   file_size = get_file_size(fd, av1);
+  if (!file_size)
+    return (FALSE);
   cub->map = malloc(sizeof(char *) * (file_size + 1));
   if (!cub->map)
     return (printf("Error\nMalloc error\n"), FALSE);
@@ -68,7 +70,7 @@ int main(int ac, char **av) {
   }
   cub = malloc(sizeof(t_cub));
   if (!download_map(cub, av[1]))
-    return (-1);
+    return (free(cub), -1);
 
   return (0);
 }
