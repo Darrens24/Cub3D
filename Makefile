@@ -29,6 +29,8 @@ SRCS = 	$(SRC_DIR)/main.c \
 					$(SRC_DIR)/data.c \
  					$(SRC_DIR)/errors.c \
  					$(SRC_DIR)/parser.c \
+ 					$(SRC_DIR)/free.c \
+ 					$(SRC_DIR)/map_analyze.c \
 
 OBJS = $(patsubst $(SRC_DIR)/%.c,$(OBJ_DIR)/%.o,$(SRCS))
 

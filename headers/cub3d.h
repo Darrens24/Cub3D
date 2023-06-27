@@ -65,8 +65,11 @@ int check_if_all_textures(t_parser *parser);
 int get_file_size(int fd, char *av1);
 void print_map(char **map);
 int download_map(t_cub *cub, char *av1);
-void free_and_exit(t_parser *parser, t_cub *cub);
+
+/***\ free \***/
+
 void free_array(char **array);
+void free_and_exit(t_parser *parser, t_cub *cub);
 void free_parser_memory(t_parser *parser);
 void free_cube(t_cub *cub);
 
@@ -82,10 +85,9 @@ int check_store_path_format(t_cub *cub, int j, char *paths[4], char **texture);
 /***\ map analyze \***/
 
 int map_analyze(t_parser *parser, t_cub *cub);
+int wall_in_the_way(char **map, int i, int j);
+int is_closing_map(char **map, t_cub *cub);
+int map_line_conformity(char *map_line);
+int duplicate_player(char *map_line, t_parser *parser);
 
 #endif
-
-/*
- * parcours du fichier telecharge dans map_file
-
- */
