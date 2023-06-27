@@ -25,7 +25,10 @@ SRC_DIR = srcs
 
 OBJ_DIR = objs
 
-SRCS = 	$(SRC_DIR)/main.c 
+SRCS = 	$(SRC_DIR)/main.c \
+					$(SRC_DIR)/data.c \
+ 					$(SRC_DIR)/errors.c \
+ 					$(SRC_DIR)/parser.c \
 
 OBJS = $(patsubst $(SRC_DIR)/%.c,$(OBJ_DIR)/%.o,$(SRCS))
 

@@ -25,7 +25,7 @@ typedef struct s_parser {
   char *tex_paths[4];
   char **map;
   char *allowed_ids[6];
-
+  int tmp_p;
 } t_parser;
 
 typedef struct s_textures_check {
@@ -39,9 +39,13 @@ typedef struct s_textures_check {
 
 typedef struct s_cub {
   char **map_file;
-  char **textures;
+  char *e_texture;
+  char *w_texture;
+  char *s_texture;
+  char *n_texture;
+  int c_color[3];
+  int f_color[3];
   uint nb_of_file_lines;
-  uint map_width;
   uint map_height;
   char p_orient;
   struct s_point p;
@@ -51,9 +55,8 @@ typedef struct s_cub {
 
 int correct_file_extension(char *name);
 int good_texture_format(char *allowed[6], char **splitted_texture);
-int valid_paths_and_color_format(t_parser *parser);
+int valid_paths_and_color_format(t_parser *parser, t_cub *cub);
 int check_if_all_textures(t_parser *parser);
-int wrong_map_format(t_cub *cub);
 
 /***\ data \***/
 
@@ -65,10 +68,16 @@ void free_array(char **array);
 
 /***\ parser \***/
 
-void initialize_parser(t_parser *parser, t_cub *cub);
+int parse_map_format(t_cub *cub);
+void initialize_parser(t_parser *parser);
 void store_parser_data(t_parser *parser, t_cub *cub);
-int check_store_color_format(int colors[3], char **texture);
-int check_store_path_format(char *paths[4], char **texture);
+int check_store_color_format(char mode, t_cub *cub, int colors[3],
+                             char **texture);
+int check_store_path_format(t_cub *cub, int j, char *paths[4], char **texture);
+
+/***\ map analyze \***/
+
+int map_analyze(t_parser *parser);
 
 #endif
 

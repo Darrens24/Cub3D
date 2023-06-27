@@ -32,7 +32,7 @@ void print_map(char **map) {
 int download_map(t_cub *cub, char *av1) {
 
   int fd;
-  int i;
+  uint i;
 
   fd = 0;
   cub->nb_of_file_lines = get_file_size(fd, av1);
@@ -70,7 +70,11 @@ void free_and_exit(t_parser *parser, t_cub *cub) {
   i = -1;
   while (parser->textures[++i])
     free_array(parser->textures[i]);
-  free_array(cub->textures);
+  free(cub->e_texture);
+  free(cub->w_texture);
+  free(cub->s_texture);
+  free(cub->n_texture);
   free_array(cub->map_file);
   free(cub);
+  exit(EXIT_SUCCESS);
 }

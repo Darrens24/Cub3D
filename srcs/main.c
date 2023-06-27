@@ -9,8 +9,9 @@ int main(int ac, char **av) {
     return (printf("Error\nFormat expected [./cub3d] [file.cub]\n"));
   }
   cub = malloc(sizeof(t_cub));
-  if (!download_map(cub, av[1]) || wrong_map_format(cub))
+  printf("Bonjour, avant de download\n");
+  if (!download_map(cub, av[1]) || !parse_map_format(cub))
     return (free(cub), -1);
-
+  printf("Bonjour, apres le download\n");
   return (0);
 }
