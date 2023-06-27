@@ -17,10 +17,8 @@ int main(int ac, char **av) {
   }
   cub = malloc(sizeof(t_cub));
   initialize_cube(cub);
-  printf("Bonjour, avant de download\n");
   if (!download_map(cub, av[1]) || !parse_map_format(cub))
     return (free(cub), -1);
-  printf("Bonjour, apres le download\n");
   free_cube(cub);
   return (0);
 }

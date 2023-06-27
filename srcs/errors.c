@@ -62,7 +62,6 @@ int check_store_color_format(char mode, t_cub *cub, int colors[3],
   char *temp;
 
   i = -1;
-  // printf("our color is %s\n", texture[1]);
   temp = ft_strtrim(texture[1], "\n");
   while (temp[++i]) {
     if (!ft_isdigit(temp[i]) && temp[i] != ',')
@@ -96,22 +95,16 @@ int check_if_all_textures(t_parser *parser) {
   while (parser->textures[++i]) {
     // printf("we evaluate %s\n", parser->textures[i][0]);
     if (ft_strncmp(parser->textures[i][0], "EA", 3) == 0) {
-      printf("east ok\n");
       check.east = 1;
     } else if (ft_strncmp(parser->textures[i][0], "NO", 3) == 0) {
-      printf("north ok\n");
       check.north = 1;
     } else if (ft_strncmp(parser->textures[i][0], "SO", 3) == 0) {
-      printf("south ok\n");
       check.south = 1;
     } else if (ft_strncmp(parser->textures[i][0], "WE", 3) == 0) {
-      printf("west ok\n");
       check.west = 1;
     } else if (ft_strncmp(parser->textures[i][0], "F", 1) == 0) {
-      printf("floor ok\n");
       check.floor = 1;
     } else if (ft_strncmp(parser->textures[i][0], "C", 1) == 0) {
-      printf("ceil ok\n");
       check.ceil = 1;
     }
   }
@@ -120,7 +113,6 @@ int check_if_all_textures(t_parser *parser) {
     printf("Error\nMap needs [EAST][WEST][SOUTH][NORTH][FLOOR][CEIL]\n");
     return (FALSE);
   }
-  printf("everything is good mate\n");
   return (TRUE);
 }
 
