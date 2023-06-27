@@ -26,6 +26,7 @@ typedef struct s_parser {
   char **map;
   char *allowed_ids[6];
   int tmp_p;
+  char orient;
 } t_parser;
 
 typedef struct s_textures_check {
@@ -39,6 +40,7 @@ typedef struct s_textures_check {
 
 typedef struct s_cub {
   char **map_file;
+  char **map;
   char *e_texture;
   char *w_texture;
   char *s_texture;
@@ -65,6 +67,8 @@ void print_map(char **map);
 int download_map(t_cub *cub, char *av1);
 void free_and_exit(t_parser *parser, t_cub *cub);
 void free_array(char **array);
+void free_parser_memory(t_parser *parser);
+void free_cube(t_cub *cub);
 
 /***\ parser \***/
 
@@ -77,7 +81,7 @@ int check_store_path_format(t_cub *cub, int j, char *paths[4], char **texture);
 
 /***\ map analyze \***/
 
-int map_analyze(t_parser *parser);
+int map_analyze(t_parser *parser, t_cub *cub);
 
 #endif
 

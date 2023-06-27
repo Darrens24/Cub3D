@@ -54,9 +54,9 @@ int download_map(t_cub *cub, char *av1) {
 void free_array(char **array) {
   int i;
 
-  i = -1;
-  while (array[++i])
-    free(array[i]);
+  i = 0;
+  while (array[i])
+    free(array[i++]);
   free(array);
 }
 
@@ -65,9 +65,6 @@ void free_and_exit(t_parser *parser, t_cub *cub) {
 
   free(parser->map);
   i = -1;
-  while (parser->tex_paths[++i])
-    free(parser->tex_paths[i]);
-  i = -1;
   while (parser->textures[++i])
     free_array(parser->textures[i]);
   free(cub->e_texture);
@@ -75,6 +72,28 @@ void free_and_exit(t_parser *parser, t_cub *cub) {
   free(cub->s_texture);
   free(cub->n_texture);
   free_array(cub->map_file);
+  free_array(cub->map);
+  free(parser);
   free(cub);
   exit(EXIT_SUCCESS);
+}
+
+void free_parser_memory(t_parser *parser) {
+  int i;
+
+  free_array(parser->map);
+  i = -1;
+  while (parser->textures[++i])
+    free_array(parser->textures[i]);
+  free(parser->textures);
+  free(parser);
+}
+
+void free_cube(t_cub *cub) {
+  free_array(cub->map);
+  free(cub->e_texture);
+  free(cub->w_texture);
+  free(cub->s_texture);
+  free(cub->n_texture);
+  free(cub);
 }

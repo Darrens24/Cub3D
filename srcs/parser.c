@@ -20,6 +20,7 @@ void initialize_parser(t_parser *parser) {
   parser->allowed_ids[3] = "EA";
   parser->allowed_ids[4] = "F";
   parser->allowed_ids[5] = "C";
+  parser->map = NULL;
   parser->tmp_p = 0;
 }
 

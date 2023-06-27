@@ -124,8 +124,64 @@ int check_if_all_textures(t_parser *parser) {
   return (TRUE);
 }
 
-int is_closing_map(char **map) {
-  (void)map;
+int wall_in_the_way(char **map, int i, int j) {
+  int tmp;
+
+  tmp = j;
+  while (map[i][j] && map[i][j] != '1')
+    j--;
+  if (map[i][j] != '1') {
+    printf("FAUX1\n");
+    return (FALSE);
+  }
+  j = tmp;
+  while (map[i][j] && map[i][j] != '1')
+    j++;
+  if (map[i][j] != '1') {
+    printf("FAUX2\n");
+    return (FALSE);
+  }
+  j = tmp;
+  tmp = i;
+  while (i >= 0 && map[i][j] != '1')
+    i--;
+  if (i < 0 || map[i][j] != '1') {
+    printf("FAUX3\n");
+    return (FALSE);
+  }
+  i = tmp;
+  while (map[i] && map[i][j] != '1')
+    i++;
+  if (!map[i] || map[i][j] != '1') {
+    printf("FAUX4\n");
+    return (FALSE);
+  }
+  return (TRUE);
+}
+
+int is_closing_map(char **map, t_cub *cub) {
+  int i;
+  int j;
+
+  i = 0;
+  j = 0;
+  while (map[i]) {
+    j = 0;
+    while (map[i][j]) {
+      if (map[i][j] == 'E' || map[i][j] == 'W' || map[i][j] == 'N' ||
+          map[i][j] == 'S') {
+        cub->p.x = j;
+        cub->p.y = i;
+        map[i][j] = '0';
+      }
+      if (map[i][j] == '0')
+        if (!wall_in_the_way(map, i, j)) {
+          return (FALSE);
+        }
+      j++;
+    }
+    i++;
+  }
   return (TRUE);
 }
 
@@ -135,8 +191,8 @@ int map_line_conformity(char *map_line) {
   j = -1;
   while (map_line[++j]) {
     if (map_line[j] != '0' && map_line[j] != '1' && map_line[j] != 'E' &&
-        map_line[j] != 'W' && map_line[j] != 'S' && map_line[j] != 'N') {
-      printf("Error\nCharacter not allowed\n");
+        map_line[j] != 'W' && map_line[j] != 'S' && map_line[j] != 'N' &&
+        map_line[j] != ' ') {
       return (FALSE);
     }
   }
@@ -150,6 +206,7 @@ int duplicate_player(char *map_line, t_parser *parser) {
   while (map_line[++j]) {
     if (map_line[j] == 'E' || map_line[j] == 'W' || map_line[j] == 'S' ||
         map_line[j] == 'N') {
+      parser->orient = map_line[j];
       parser->tmp_p++;
     }
   }
@@ -158,7 +215,7 @@ int duplicate_player(char *map_line, t_parser *parser) {
   return (TRUE);
 }
 
-int map_analyze(t_parser *parser) {
+int map_analyze(t_parser *parser, t_cub *cub) {
   int i;
 
   i = -1;
@@ -170,25 +227,44 @@ int map_analyze(t_parser *parser) {
         !duplicate_player(parser->map[i], parser))
       return (FALSE);
   }
-  if (parser->tmp_p != 1 || !is_closing_map(parser->map)) {
+  if (parser->tmp_p != 1 || !is_closing_map(parser->map, cub)) {
     return (FALSE);
   }
+  cub->p_orient = parser->orient;
   return (TRUE);
 }
 
 int parse_map_format(t_cub *cub) {
   t_parser *parser;
+  int i;
 
   parser = malloc(sizeof(t_parser));
   initialize_parser(parser);
   store_parser_data(parser, cub);
-  if (map_analyze(parser) == FALSE) {
+  if (map_analyze(parser, cub) == FALSE) {
     printf("Error\nBad map format\n");
-    // free_parser_memory(parser);
+    free_parser_memory(parser);
     return (FALSE);
   }
-  // definitive_program_data(parser, cub);
-  // free_parser_memory(parser);
-
+  printf("e text is %s\n", cub->e_texture);
+  printf("w text is %s\n", cub->w_texture);
+  printf("s text is %s\n", cub->s_texture);
+  printf("n text is %s\n", cub->n_texture);
+  printf("ceil color is [%d, %d, %d]\n", cub->c_color[0], cub->c_color[1],
+         cub->c_color[2]);
+  printf("floor color is [%d, %d, %d]\n", cub->f_color[0], cub->f_color[1],
+         cub->f_color[2]);
+  printf("player position is (%d, %d), with orientation %c\n", cub->p.x,
+         cub->p.y, cub->p_orient);
+  cub->map = malloc(sizeof(char *) * (cub->map_height + 1));
+  if (!cub->map) {
+    free_parser_memory(parser);
+    return (FALSE);
+  }
+  i = -1;
+  while (parser->map[++i])
+    cub->map[i] = ft_strdup(parser->map[i]);
+  free_parser_memory(parser);
+  free_array(cub->map_file);
   return (TRUE);
 }
