@@ -59,6 +59,10 @@ typedef struct s_cub {
   char				*w_texture;
   char				*s_texture;
   char				*n_texture;
+  void				*e_img;
+  void				*w_img;
+  void				*s_img;
+  void				*n_img;
   int				c_color[3];
   int				f_color[3];
   unsigned int		nb_of_file_lines;
@@ -167,6 +171,10 @@ void	my_mlx_pixel_put(t_data *data, int x, int y, int color);
 
 void	drawline(int i, t_cub *cub);
 void	putpixel(t_cub *cub);
+
+/***\ texture \***/
+
+void	xpm_to_img(t_cub *cub);
 
 /***\ friendless \***/
 

@@ -6,7 +6,7 @@
 /*   By: pfaria-d <pfaria-d@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/28 14:22:07 by pfaria-d          #+#    #+#             */
-/*   Updated: 2023/06/28 14:58:57 by pfaria-d         ###   ########.fr       */
+/*   Updated: 2023/06/28 17:15:33 by pfaria-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,14 @@ void	drawline(int i, t_cub *cub)
 	int	y;
 
 	getcolor(cub);
+	y = 0;
+	while (y < cub->drawstart)
+		my_mlx_pixel_put(&cub->mlximg, i, y++, getrgb(cub->c_color[0], cub->c_color[1], cub->c_color[2]));
 	y = cub->drawstart;
 	while (y < cub->drawend)
 		my_mlx_pixel_put(&cub->mlximg, i, y++, cub->color);
+	while (y < cub->map_height)
+		my_mlx_pixel_put(&cub->mlximg, i, y++, getrgb(cub->f_color[0], cub->f_color[1], cub->f_color[2]));
 }
 
 void	putpixel(t_cub *cub)
