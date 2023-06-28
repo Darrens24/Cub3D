@@ -46,8 +46,8 @@ int is_closing_map(char **map, t_cub *cub) {
     while (map[i][j]) {
       if (map[i][j] == 'E' || map[i][j] == 'W' || map[i][j] == 'N' ||
           map[i][j] == 'S') {
-        cub->p.x = j;
-        cub->p.y = i;
+        cub->p.x = i;
+        cub->p.y = j;
         map[i][j] = '0';
       }
       if (map[i][j] == '0')

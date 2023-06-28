@@ -19,7 +19,7 @@ NAME = cub3d
 
 CC = gcc
 
-CFLAGS = -Wall -Wextra -Werror 
+CFLAGS = -Wall -Wextra -Werror -fsanitize=address -g 
 
 SRC_DIR = srcs
 
@@ -31,6 +31,12 @@ SRCS = 	$(SRC_DIR)/main.c \
  					$(SRC_DIR)/parser.c \
  					$(SRC_DIR)/free.c \
  					$(SRC_DIR)/map_analyze.c \
+ 					$(SRC_DIR)/getters.c \
+ 					$(SRC_DIR)/getters2.c \
+ 					$(SRC_DIR)/drawline.c \
+ 					$(SRC_DIR)/inputs.c \
+ 					$(SRC_DIR)/rotatemouse.c \
+ 					$(SRC_DIR)/movements.c \
 
 OBJS = $(patsubst $(SRC_DIR)/%.c,$(OBJ_DIR)/%.o,$(SRCS))
 
@@ -38,13 +44,13 @@ all: $(NAME)
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
 	@mkdir -p $(@D)
-	@$(CC) $(CFLAGS) -I ./headers -c $< -o $@
+	@$(CC) $(CFLAGS) -Imlx -c $< -o $@
 
 $(NAME): $(OBJS)
 	@echo ${LIGHTBLUE}Libft compiling !${NOCOLOR}
 	@make -C ./Libft
 	@echo ${LIGHTBLUE}$(NAME) compiling !${NOCOLOR}
-	@$(CC) $(CFLAGS) -I ./headers $(OBJS) -o $@ ./Libft/libft.a
+	@$(CC) $(CFLAGS) -Imlx -framework OpenGL -framework AppKit $(OBJS) -o $@ ./Libft/libft.a mlx/libmlx.a
 	@echo ${LIGHTGREEN}$(NAME) compiled !${NOCOLOR}
 
 clean:

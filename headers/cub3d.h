@@ -11,6 +11,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include <mlx.h>
 
 /***\ structures \***/
 
@@ -63,8 +64,8 @@ typedef struct s_cub {
   unsigned int		nb_of_file_lines;
   char				p_orient;
   struct			s_point p;
-  unsigned int		map_width;
-  unsigned int		map_height;
+  int				map_width;
+  int				map_height;
   struct s_point	pdir;
   struct s_point	plane;
   struct s_point	raydir;
@@ -125,5 +126,50 @@ int wall_in_the_way(char **map, int i, int j);
 int is_closing_map(char **map, t_cub *cub);
 int map_line_conformity(char *map_line);
 int duplicate_player(char *map_line, t_parser *parser);
+
+/***\ getters \***/
+
+void	getcamerax(t_cub *cub, int i);
+void	getstepdist(t_cub *cub);
+void	getdeltadist(t_cub *cub);
+void	getmapc(t_cub *cub);
+void	getplayerdir(t_cub *cub);
+
+/***\ getters2 \***/
+
+void	getcolor(t_cub *cub);
+void	getperpwalldist(t_cub *cub);
+void	getdraw(t_cub *cub);
+int		getrgb(int r, int g, int b);
+void	playerdir(int x, int y, t_cub *cub);
+
+/***\ movements \***/
+
+void	mlxsetup(t_cub *cub);
+void	moveright(t_cub *cub);
+void	moveleft(t_cub *cub);
+void	movedown(t_cub *cub);
+void	moveup(t_cub *cub);
+
+/***\ rotate mouse \***/
+
+void	rotateright(t_cub *cub);
+void	rotateleft(t_cub *cub);
+int		mouse_input(t_cub *cub);
+
+/***\ inputs \***/
+
+int		inputs(int key, t_cub *cub);
+int		destroy(t_cub *cub);
+void	my_mlx_pixel_put(t_data *data, int x, int y, int color);
+
+/***\ drawline \***/
+
+void	drawline(int i, t_cub *cub);
+void	putpixel(t_cub *cub);
+
+/***\ friendless \***/
+
+void	squarejumper(t_cub *cub);
 
 #endif
