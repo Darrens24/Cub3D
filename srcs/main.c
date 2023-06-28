@@ -42,6 +42,8 @@ int main(int ac, char **av) {
 	cub->map_width = 640;
 	cub->map_height = 480;
 	mlxsetup(cub);
+	cub->p.x += 0.1;
+	cub->p.y += 0.1;
 	getplayerdir(cub);
 	putpixel(cub);
 	mlx_put_image_to_window(cub->mlx, cub->mlxwin, cub->mlximg.img, 0, 0);
