@@ -15,8 +15,8 @@
 /***\ structures \***/
 
 typedef struct s_point {
-  int x;
-  int y;
+  float	x;
+  float	y;
 } t_point;
 
 typedef struct s_parser {
@@ -38,19 +38,55 @@ typedef struct s_textures_check {
   int ceil;
 } t_texchek;
 
+typedef struct s_pointi {
+  int	x;
+  int	y;
+} t_pointi;
+
+typedef struct	s_data {
+	void	*img;
+	char	*addr;
+	int		bits_per_pixel;
+	int		line_length;
+	int		endian;
+}				t_data;
+
 typedef struct s_cub {
-  char **map_file;
-  char **map;
-  char *e_texture;
-  char *w_texture;
-  char *s_texture;
-  char *n_texture;
-  int c_color[3];
-  int f_color[3];
-  uint nb_of_file_lines;
-  uint map_height;
-  char p_orient;
-  struct s_point p;
+  char				**map_file;
+  char				**map;
+  char				*e_texture;
+  char				*w_texture;
+  char				*s_texture;
+  char				*n_texture;
+  int				c_color[3];
+  int				f_color[3];
+  unsigned int		nb_of_file_lines;
+  char				p_orient;
+  struct			s_point p;
+  unsigned int		map_width;
+  unsigned int		map_height;
+  struct s_point	pdir;
+  struct s_point	plane;
+  struct s_point	raydir;
+  float				camerax;
+  struct s_pointi	mapc;
+  struct s_point	deltadist;
+  float				perpwalldist;
+  struct s_point	sidedist;
+  struct s_point	step;
+  int				wall;
+  char				side;
+  void				*mlx;
+  void				*mlxwin;
+  t_data			mlximg;
+  int				lineheight;
+  int				drawstart;
+  int				drawend;
+  unsigned int		color;
+  float				movespeed;
+  float				rotspeed;
+  int				x;
+  int				y;
 } t_cub;
 
 /***\ errors \***/

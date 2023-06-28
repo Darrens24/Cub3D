@@ -32,7 +32,7 @@ void print_map(char **map) {
 int download_map(t_cub *cub, char *av1) {
 
   int fd;
-  uint i;
+  unsigned int i;
 
   fd = 0;
   cub->nb_of_file_lines = get_file_size(fd, av1);

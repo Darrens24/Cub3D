@@ -136,7 +136,7 @@ int parse_map_format(t_cub *cub) {
          cub->c_color[2]);
   printf("floor color is [%d, %d, %d]\n", cub->f_color[0], cub->f_color[1],
          cub->f_color[2]);
-  printf("player position is (%d, %d), with orientation %c\n", cub->p.x,
+  printf("player position is (%f, %f), with orientation %c\n", cub->p.x,
          cub->p.y, cub->p_orient);
   cub->map = malloc(sizeof(char *) * (cub->map_height + 1));
   if (!cub->map) {
