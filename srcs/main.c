@@ -39,13 +39,12 @@ int main(int ac, char **av) {
   initialize_cube(cub);
   if (!download_map(cub, av[1]) || !parse_map_format(cub))
     return (free(cub), -1);
-  printf("coucou\n");
 	cub->map_width = 640;
 	cub->map_height = 480;
-	xpm_to_img(cub);
 	mlxsetup(cub);
 	cub->p.x += 0.1;
 	cub->p.y += 0.1;
+	xpm_to_img(cub);
 	getplayerdir(cub);
 	putpixel(cub);
 	mlx_put_image_to_window(cub->mlx, cub->mlxwin, cub->mlximg.img, 0, 0);
