@@ -60,15 +60,19 @@ int check_store_color_format(char mode, t_cub *cub, int colors[3],
   int j;
   char **coma_splitted_color;
   char *temp;
+  int coma;
 
   i = -1;
   temp = ft_strtrim(texture[1], "\n");
+  coma = 0;
   while (temp[++i]) {
-    if (!ft_isdigit(temp[i]) && temp[i] != ',')
+	if (temp[i] == ',')
+		coma++;
+    if ((!ft_isdigit(temp[i]) && temp[i] != ',') || coma != 2)
       return (FALSE);
   }
+  coma_splitted_color = ft_split(temp, ',');
   free(temp);
-  coma_splitted_color = ft_split(texture[1], ',');
   if (!coma_splitted_color[1] || !coma_splitted_color[2] ||
       coma_splitted_color[3])
     return (free_array(coma_splitted_color), FALSE);
