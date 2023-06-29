@@ -42,6 +42,7 @@ int main(int ac, char **av) {
   printf("coucou\n");
 	cub->map_width = 640;
 	cub->map_height = 480;
+	xpm_to_img(cub);
 	mlxsetup(cub);
 	cub->p.x += 0.1;
 	cub->p.y += 0.1;
