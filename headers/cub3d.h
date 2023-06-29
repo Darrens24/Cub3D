@@ -50,6 +50,8 @@ typedef struct	s_data {
 	int		bits_per_pixel;
 	int		line_length;
 	int		endian;
+	int		x;
+	int		y;
 }				t_data;
 
 typedef struct s_cub {
@@ -59,10 +61,10 @@ typedef struct s_cub {
   char				*w_texture;
   char				*s_texture;
   char				*n_texture;
-  void				*e_img;
-  void				*w_img;
-  void				*s_img;
-  void				*n_img;
+  t_data			*e_data;
+  t_data			*w_data;
+  t_data			*s_data;
+  t_data			*n_data;
   int				c_color[3];
   int				f_color[3];
   unsigned int		nb_of_file_lines;
@@ -175,6 +177,7 @@ void	putpixel(t_cub *cub);
 /***\ texture \***/
 
 void	xpm_to_img(t_cub *cub);
+int		get_pixel_color(t_data *data, int x, int y);
 
 /***\ friendless \***/
 
