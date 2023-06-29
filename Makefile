@@ -19,7 +19,7 @@ NAME = cub3d
 
 CC = gcc
 
-CFLAGS = -Wall -Wextra -Werror -fsanitize=address -g 
+CFLAGS = -Wall -Wextra -Werror #-fsanitize=address -g 
 
 SRC_DIR = srcs
 
@@ -38,6 +38,7 @@ SRCS = 	$(SRC_DIR)/main.c \
  					$(SRC_DIR)/rotatemouse.c \
  					$(SRC_DIR)/movements.c \
  					$(SRC_DIR)/textures.c \
+ 					$(SRC_DIR)/minimap.c \
 
 OBJS = $(patsubst $(SRC_DIR)/%.c,$(OBJ_DIR)/%.o,$(SRCS))
 

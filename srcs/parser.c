@@ -60,6 +60,8 @@ int get_map_size(t_cub *cub, int i) {
     j++;
   }
   cub->map_height = j;
+  cub->max_hei = j;
+  cub->max_wid = 0;
   return (j);
 }
 

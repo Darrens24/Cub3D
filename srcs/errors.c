@@ -128,16 +128,16 @@ int parse_map_format(t_cub *cub) {
     free_parser_memory(parser);
     return (FALSE);
   }
-  printf("e text is %s\n", cub->e_texture);
-  printf("w text is %s\n", cub->w_texture);
-  printf("s text is %s\n", cub->s_texture);
-  printf("n text is %s\n", cub->n_texture);
-  printf("ceil color is [%d, %d, %d]\n", cub->c_color[0], cub->c_color[1],
-         cub->c_color[2]);
-  printf("floor color is [%d, %d, %d]\n", cub->f_color[0], cub->f_color[1],
-         cub->f_color[2]);
-  printf("player position is (%f, %f), with orientation %c\n", cub->p.x,
-         cub->p.y, cub->p_orient);
+  /* printf("e text is %s\n", cub->e_texture); */
+  /* printf("w text is %s\n", cub->w_texture); */
+  /* printf("s text is %s\n", cub->s_texture); */
+  /* printf("n text is %s\n", cub->n_texture); */
+  /* printf("ceil color is [%d, %d, %d]\n", cub->c_color[0], cub->c_color[1], */
+  /*        cub->c_color[2]); */
+  /* printf("floor color is [%d, %d, %d]\n", cub->f_color[0], cub->f_color[1], */
+  /*        cub->f_color[2]); */
+  /* printf("player position is (%f, %f), with orientation %c\n", cub->p.x, */
+  /*        cub->p.y, cub->p_orient); */
   cub->map = malloc(sizeof(char *) * (cub->map_height + 1));
   if (!cub->map) {
     free_parser_memory(parser);
@@ -145,7 +145,12 @@ int parse_map_format(t_cub *cub) {
   }
   i = -1;
   while (parser->map[++i])
+  {
+	if ((int)(ft_strlen(parser->map[i])) > cub->max_wid)
+		cub->max_wid = (int)ft_strlen(parser->map[i]);
     cub->map[i] = ft_strdup(parser->map[i]);
+  }
+  cub->map[i] = NULL;
   free_parser_memory(parser);
   free_array(cub->map_file);
   return (TRUE);

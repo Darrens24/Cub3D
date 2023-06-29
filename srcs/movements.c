@@ -6,7 +6,7 @@
 /*   By: pfaria-d <pfaria-d@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/28 14:17:49 by pfaria-d          #+#    #+#             */
-/*   Updated: 2023/06/28 14:56:25 by pfaria-d         ###   ########.fr       */
+/*   Updated: 2023/06/29 14:21:53 by eleleux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ void	moveright(t_cub *cub)
 void	mlxsetup(t_cub *cub)
 {
 	cub->mlx = mlx_init();
-	printf("%d %d\n", cub->map_width, cub->map_height);
+	printf("map dimensions: %d %d\n", cub->map_width, cub->map_height);
 	cub->mlxwin = mlx_new_window(cub->mlx, cub->map_width, cub->map_height, "CUB3D");
 	cub->mlximg.img = mlx_new_image(cub->mlx, cub->map_width, cub->map_height);
 	cub->mlximg.addr = mlx_get_data_addr(cub->mlximg.img, &cub->mlximg.bits_per_pixel, &cub->mlximg.line_length, &cub->mlximg.endian);
