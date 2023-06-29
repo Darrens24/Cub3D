@@ -68,7 +68,7 @@ int check_store_color_format(char mode, t_cub *cub, int colors[3],
   while (temp[++i]) {
 	if (temp[i] == ',')
 		coma++;
-    if ((!ft_isdigit(temp[i]) && temp[i] != ',') || coma != 2)
+    if ((!ft_isdigit(temp[i]) && temp[i] != ',') || coma > 2)
       return (FALSE);
   }
   coma_splitted_color = ft_split(temp, ',');

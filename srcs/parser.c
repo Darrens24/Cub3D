@@ -39,12 +39,16 @@ int valid_paths_and_color_format(t_parser *parser, t_cub *cub) {
     } else if (ft_strncmp("C", parser->textures[i][0], 2) == 0) {
       if (!check_store_color_format('c', cub, parser->colors,
                                     parser->textures[i]))
+	  {
         return (FALSE);
+	  }
     } else {
       // printf("coucou texture ^^\n");
       if (!check_store_path_format(cub, j, parser->tex_paths,
                                    parser->textures[i]))
+	  {
         return (FALSE);
+	  }
       j++;
     }
   }
@@ -86,6 +90,7 @@ void store_parser_data(t_parser *parser, t_cub *cub) {
   if (!check_if_all_textures(parser) ||
       !valid_paths_and_color_format(parser, cub))
     free_and_exit(parser, cub);
+  printf("coucou du parse\n");
   // printf("all paths and colors are good WOW\n");
   while (cub->map_file[i] && ft_strncmp(cub->map_file[i], "\n", 1) == 0) {
     i++;
