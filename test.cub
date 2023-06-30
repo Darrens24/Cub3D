@@ -2,7 +2,7 @@ EA ./textures/igl64.xpm
 NO ./textures/north.xpm
 SO ./textures/south.xpm
 F 220,100,0
-C 100,0,0
+C 0,0,0
 
 
 WE ./textures/west.xpm

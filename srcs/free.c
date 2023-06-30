@@ -3,6 +3,8 @@
 void free_array(char **array) {
   int i;
 
+  if (!array)
+	  return ;
   i = 0;
   while (array[i])
     free(array[i++]);
@@ -24,6 +26,7 @@ void free_and_exit(t_parser *parser, t_cub *cub) {
   free_array(cub->map);
   free(parser);
   free(cub);
+  printf("Error\nBad map format\n");
   exit(EXIT_SUCCESS);
 }
 

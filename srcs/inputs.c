@@ -6,7 +6,7 @@
 /*   By: pfaria-d <pfaria-d@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/28 14:20:29 by pfaria-d          #+#    #+#             */
-/*   Updated: 2023/06/29 16:36:19 by eleleux          ###   ########.fr       */
+/*   Updated: 2023/06/30 10:22:19 by eleleux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,9 +46,12 @@ int	inputs(int key, t_cub *cub)
 	else if (key == 53)
 		destroy(cub);
 	mlx_destroy_image(cub->mlx, cub->mlximg.img);
+	mlx_destroy_image(cub->mlx, cub->minimap->img);
 	cub->mlximg.img = mlx_new_image(cub->mlx, cub->map_width, cub->map_height);
 	cub->mlximg.addr = mlx_get_data_addr(cub->mlximg.img, &cub->mlximg.bits_per_pixel, &cub->mlximg.line_length, &cub->mlximg.endian);
 	putpixel(cub);
 	mlx_put_image_to_window(cub->mlx, cub->mlxwin, cub->mlximg.img, 0, 0);
+	put_minimap(cub);
+	mlx_put_image_to_window(cub->mlx, cub->mlxwin, cub->minimap->img, 0, 0);
 	return (0);
 }

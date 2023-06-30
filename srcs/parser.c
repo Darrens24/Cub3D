@@ -87,7 +87,9 @@ void store_parser_data(t_parser *parser, t_cub *cub) {
   }
   if (!check_if_all_textures(parser) ||
       !valid_paths_and_color_format(parser, cub))
+  {
     free_and_exit(parser, cub);
+  }
   // printf("all paths and colors are good WOW\n");
   while (cub->map_file[i] && ft_strncmp(cub->map_file[i], "\n", 1) == 0) {
     i++;
