@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 EA ./textures/igl64.xpm
 NO ./textures/north.xpm
 SO ./textures/south.xpm
@@ -12,4 +13,19 @@ WE ./textures/west.xpm
 11111111111011
 11100000000001
 111100011110001
+=======
+EA ./textures/walkstone.xpm
+NO ./textures/gemov1.xpm
+SO ./textures/lavaf1.xpm
+F 124,252,0
+C 135,206,235
+
+WE ./textures/bookshelf_1.xpm
+
+111111111111
+10101010101011
+11111111111S11
+11111111000001
+11111111110001 
+>>>>>>> main
     1111111111

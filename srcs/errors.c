@@ -64,7 +64,13 @@ int check_store_color_format(char mode, t_cub *cub, int colors[3],
   i = -1;
   temp = ft_strtrim(texture[1], "\n");
   while (temp[++i]) {
+<<<<<<< HEAD
     if (!ft_isdigit(temp[i]) && temp[i] != ',')
+=======
+	if (temp[i] == ',')
+		coma++;
+    if ((!ft_isdigit(temp[i]) && temp[i] != ',') || coma > 2)
+>>>>>>> main
       return (FALSE);
   }
   free(temp);

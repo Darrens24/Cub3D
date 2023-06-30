@@ -6,28 +6,15 @@
 /*   By: pfaria-d <pfaria-d@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/28 14:14:52 by pfaria-d          #+#    #+#             */
+<<<<<<< HEAD
 /*   Updated: 2023/06/28 17:12:50 by pfaria-d         ###   ########.fr       */
+=======
+/*   Updated: 2023/06/29 18:47:58 by pfaria-d         ###   ########.fr       */
+>>>>>>> main
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../headers/cub3d.h"
-
-void	getcolor(t_cub *cub)
-{
-	//changer rgb et mettre rgb donnees
-	if (cub->map[cub->mapc.x][cub->mapc.y] == '1')
-		cub->color = getrgb(255, 0, 0);
-	else if (cub->map[cub->mapc.x][cub->mapc.y] == '2')
-		cub->color = getrgb(0, 255, 0);
-	else if (cub->map[cub->mapc.x][cub->mapc.y] == '3')
-		cub->color = getrgb(0, 0, 255);
-	else if (cub->map[cub->mapc.x][cub->mapc.y] == '4')
-		cub->color = getrgb(255, 255, 255);
-	else
-		cub->color = getrgb(100, 100, 100);
-	if (cub->side == 1)
-		cub->color = cub->color / 2;
-}
 
 void	getperpwalldist(t_cub *cub)
 {
@@ -45,6 +32,18 @@ void	getdraw(t_cub *cub)
 	cub->drawend = cub->lineheight / 2 + cub->map_height / 2;
 	if (cub->drawend >= cub->map_height)
 		cub->drawend = cub->map_height - 1;
+	if (cub->side == 0)
+		cub->wallx = cub->p.y + cub->perpwalldist * cub->raydir.y;
+	else
+		cub->wallx = cub->p.x + cub->perpwalldist * cub->raydir.x;
+	cub->wallx -= floor((cub->wallx));
+	cub->tex.x = (int)(cub->wallx * (float)64);
+	if (cub->side == 0 && cub->raydir.x > 0)
+		cub->tex.x = 64 - cub->tex.x - 1;
+	if (cub->side == 1 && cub->raydir.y < 0)
+		cub->tex.x = 64 - cub->tex.x - 1;
+	cub->texstep = 1.0 * 64 / cub->lineheight;
+	cub->texpos = (cub->drawstart - cub->map_height / 2 + cub->lineheight / 2) * cub->texstep;
 }
 
 int	getrgb(int r, int g, int b)

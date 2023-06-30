@@ -39,12 +39,16 @@ int valid_paths_and_color_format(t_parser *parser, t_cub *cub) {
     } else if (ft_strncmp("C", parser->textures[i][0], 2) == 0) {
       if (!check_store_color_format('c', cub, parser->colors,
                                     parser->textures[i]))
+	  {
         return (FALSE);
+	  }
     } else {
       // printf("coucou texture ^^\n");
       if (!check_store_path_format(cub, j, parser->tex_paths,
                                    parser->textures[i]))
+	  {
         return (FALSE);
+	  }
       j++;
     }
   }
@@ -55,13 +59,19 @@ int get_map_size(t_cub *cub, int i) {
   int j;
 
   j = 0;
+  cub->max_wid = 0;
   while (cub->map_file[i]) {
+	  if ((int)ft_strlen(cub->map_file[i]) > cub->max_wid)
+		  cub->max_wid = (int)ft_strlen(cub->map_file[i]);
     i++;
     j++;
   }
   cub->map_height = j;
   cub->max_hei = j;
+<<<<<<< HEAD
   cub->max_wid = 0;
+=======
+>>>>>>> main
   return (j);
 }
 

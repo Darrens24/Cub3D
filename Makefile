@@ -15,11 +15,15 @@ LIGHTPURPLE='\033[1;35m'
 LIGHTCYAN='\033[1;36m'
 WHITE='\033[1;37m'
 
-NAME = cub3d
+NAME = cub3D
 
 CC = gcc
 
+<<<<<<< HEAD
 CFLAGS = -Wall -Wextra -Werror #-fsanitize=address -g 
+=======
+CFLAGS = -Wall -Wextra -Werror 
+>>>>>>> main
 
 SRC_DIR = srcs
 

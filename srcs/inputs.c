@@ -6,7 +6,11 @@
 /*   By: pfaria-d <pfaria-d@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/28 14:20:29 by pfaria-d          #+#    #+#             */
+<<<<<<< HEAD
 /*   Updated: 2023/06/30 10:22:19 by eleleux          ###   ########.fr       */
+=======
+/*   Updated: 2023/06/30 14:52:03 by pfaria-d         ###   ########.fr       */
+>>>>>>> main
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +56,9 @@ int	inputs(int key, t_cub *cub)
 	putpixel(cub);
 	mlx_put_image_to_window(cub->mlx, cub->mlxwin, cub->mlximg.img, 0, 0);
 	put_minimap(cub);
+<<<<<<< HEAD
 	mlx_put_image_to_window(cub->mlx, cub->mlxwin, cub->minimap->img, 0, 0);
+=======
+>>>>>>> main
 	return (0);
 }

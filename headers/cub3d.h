@@ -89,14 +89,22 @@ typedef struct s_cub {
   int				lineheight;
   int				drawstart;
   int				drawend;
-  unsigned int		color;
   float				movespeed;
   float				rotspeed;
+  struct s_pointi	tex;
+  float				texpos;
+  float				texstep;
+  float				wallx;
   int				x;
   int				y;
   t_data			*minimap;
+<<<<<<< HEAD
   int				max_hei;
   int				max_wid;
+=======
+  int				max_wid;
+  int				max_hei;
+>>>>>>> main
 } t_cub;
 
 /***\ errors \***/
