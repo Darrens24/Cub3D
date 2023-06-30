@@ -1,17 +1,8 @@
-<<<<<<< HEAD
 EA ./textures/walkstone.xpm
 NO ./textures/gemov1.xpm
 SO ./textures/lavaf1.xpm
 F 124,252,0
 C 135,206,235
-=======
-EA ./textures/choko.xpm
-NO ./textures/north.xpm
-SO ./textures/south.xpm
-F 220,100,0
-C 100,0,0
->>>>>>> 137de4b4043c7e5a8f9854250099b8d5417809f1
-
 
 WE ./textures/bookshelf_1.xpm
 
