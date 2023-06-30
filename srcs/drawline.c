@@ -6,7 +6,7 @@
 /*   By: pfaria-d <pfaria-d@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/28 14:22:07 by pfaria-d          #+#    #+#             */
-/*   Updated: 2023/06/29 12:00:11 by pfaria-d         ###   ########.fr       */
+/*   Updated: 2023/06/30 13:05:10 by pfaria-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,34 @@ void	drawline(int i, t_cub *cub)
 	while (y < cub->drawstart)
 		my_mlx_pixel_put(&cub->mlximg, i, y++, getrgb(cub->c_color[0], cub->c_color[1], cub->c_color[2]));
 	y = cub->drawstart - 1;
-	while (++y < cub->drawend)
-		my_mlx_pixel_put(&cub->mlximg, i, y, get_pixel_color(cub->e_data, i, y));
+	if (cub->side == 1 && cub->p.y < cub->mapc.y)
+		while (++y < cub->drawend)
+		{
+			cub->tex.y = (int)cub->texpos & (64 - 1);
+			cub->texpos += cub->texstep;
+			my_mlx_pixel_put(&cub->mlximg, i, y, get_pixel_color(cub->e_data, cub->tex.x, cub->tex.y));
+		}
+	else if (cub->side == 1 && cub->p.y > cub->mapc.y)
+		while (++y < cub->drawend)
+		{
+			cub->tex.y = (int)cub->texpos & (64 - 1);
+			cub->texpos += cub->texstep;
+			my_mlx_pixel_put(&cub->mlximg, i, y, get_pixel_color(cub->w_data, cub->tex.x, cub->tex.y));
+		}
+	else if (cub->side == 0 && cub->p.x < cub->mapc.x)
+		while (++y < cub->drawend)
+		{
+			cub->tex.y = (int)cub->texpos & (64 - 1);
+			cub->texpos += cub->texstep;
+			my_mlx_pixel_put(&cub->mlximg, i, y, get_pixel_color(cub->s_data, cub->tex.x, cub->tex.y));
+		}
+	else 
+		while (++y < cub->drawend)
+		{
+			cub->tex.y = (int)cub->texpos & (64 - 1);
+			cub->texpos += cub->texstep;
+			my_mlx_pixel_put(&cub->mlximg, i, y, get_pixel_color(cub->n_data, cub->tex.x, cub->tex.y));
+		}
 	while (y < cub->map_height)
 		my_mlx_pixel_put(&cub->mlximg, i, y++, getrgb(cub->f_color[0], cub->f_color[1], cub->f_color[2]));
 }

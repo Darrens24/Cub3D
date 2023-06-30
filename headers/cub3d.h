@@ -91,8 +91,9 @@ typedef struct s_cub {
   int				drawend;
   float				movespeed;
   float				rotspeed;
-  int				texnum;
   struct s_pointi	tex;
+  float				texpos;
+  float				texstep;
   float				wallx;
   int				x;
   int				y;

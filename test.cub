@@ -1,11 +1,11 @@
 EA ./textures/walkstone.xpm
-NO ./textures/north.xpm
-SO ./textures/south.xpm
+NO ./textures/gemov1.xpm
+SO ./textures/lavaf1.xpm
 F 124,252,0
 C 135,206,235
 
 
-WE ./textures/west.xpm
+WE ./textures/bookshelf_1.xpm
 
 111111111111
 10101010101011
