@@ -69,7 +69,7 @@ typedef struct s_cub {
   int				f_color[3];
   unsigned int		nb_of_file_lines;
   char				p_orient;
-  struct			s_point p;
+  struct s_point	p;
   int				map_width;
   int				map_height;
   struct s_point	pdir;
