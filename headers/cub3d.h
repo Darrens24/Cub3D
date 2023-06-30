@@ -97,6 +97,9 @@ typedef struct s_cub {
   float				wallx;
   int				x;
   int				y;
+  t_data			*minimap;
+  int				max_wid;
+  int				max_hei;
 } t_cub;
 
 /***\ errors \***/
@@ -185,5 +188,6 @@ int		get_pixel_color(t_data *data, int x, int y);
 /***\ friendless \***/
 
 void	squarejumper(t_cub *cub);
+void	put_minimap(t_cub *cub);
 
 #endif

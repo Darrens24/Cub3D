@@ -48,7 +48,8 @@ int main(int ac, char **av) {
 	getplayerdir(cub);
 	putpixel(cub);
 	mlx_put_image_to_window(cub->mlx, cub->mlxwin, cub->mlximg.img, 0, 0);
-	mlx_loop_hook(cub->mlx, NULL, NULL);
+	put_minimap(cub);
+	/* mlx_loop_hook(cub->mlx, NULL, NULL); */
 	mlx_loop_hook(cub->mlx, *mouse_input, cub);
 	mlx_hook(cub->mlxwin, 17, 1L<<17, destroy, cub); 
 	mlx_hook(cub->mlxwin, 2, 1L<<0, inputs, cub); 

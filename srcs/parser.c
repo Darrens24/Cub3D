@@ -59,11 +59,15 @@ int get_map_size(t_cub *cub, int i) {
   int j;
 
   j = 0;
+  cub->max_wid = 0;
   while (cub->map_file[i]) {
+	  if ((int)ft_strlen(cub->map_file[i]) > cub->max_wid)
+		  cub->max_wid = (int)ft_strlen(cub->map_file[i]);
     i++;
     j++;
   }
   cub->map_height = j;
+  cub->max_hei = j;
   return (j);
 }
 
@@ -90,7 +94,6 @@ void store_parser_data(t_parser *parser, t_cub *cub) {
   if (!check_if_all_textures(parser) ||
       !valid_paths_and_color_format(parser, cub))
     free_and_exit(parser, cub);
-  printf("coucou du parse\n");
   // printf("all paths and colors are good WOW\n");
   while (cub->map_file[i] && ft_strncmp(cub->map_file[i], "\n", 1) == 0) {
     i++;

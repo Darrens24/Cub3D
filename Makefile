@@ -38,6 +38,7 @@ SRCS = 	$(SRC_DIR)/main.c \
  					$(SRC_DIR)/rotatemouse.c \
  					$(SRC_DIR)/movements.c \
  					$(SRC_DIR)/textures.c \
+ 					$(SRC_DIR)/minimap.c \
 
 OBJS = $(patsubst $(SRC_DIR)/%.c,$(OBJ_DIR)/%.o,$(SRCS))
 
