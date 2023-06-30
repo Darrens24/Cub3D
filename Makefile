@@ -15,7 +15,7 @@ LIGHTPURPLE='\033[1;35m'
 LIGHTCYAN='\033[1;36m'
 WHITE='\033[1;37m'
 
-NAME = cub3d
+NAME = cub3D
 
 CC = gcc
 

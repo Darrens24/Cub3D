@@ -27,6 +27,7 @@ void free_and_exit(t_parser *parser, t_cub *cub) {
 	  free_array(cub->map);
   free(parser);
   free(cub);
+  printf("Error\nBad map format\n");
   exit(EXIT_SUCCESS);
 }
 
