@@ -38,29 +38,18 @@ int main(int ac, char **av) {
   cub = malloc(sizeof(t_cub));
   initialize_cube(cub);
   if (!download_map(cub, av[1]) || !parse_map_format(cub))
-  {
-	  /* system("leaks cub3d"); */
     return (free(cub), -1);
-  }
 	cub->map_width = 640;
 	cub->map_height = 480;
-	printf("longest line is %d\nheight is %d\n", cub->max_wid, cub->max_hei);
-	print_map(cub->map);
 	mlxsetup(cub);
 	cub->p.x += 0.1;
 	cub->p.y += 0.1;
 	xpm_to_img(cub);
 	getplayerdir(cub);
 	putpixel(cub);
-<<<<<<< HEAD
-	put_minimap(cub);
-	/* mlx_put_image_to_window(cub->mlx, cub->mlxwin, cub->mlximg.img, 0, 0); */
-	mlx_loop_hook(cub->mlx, NULL, NULL);
-=======
 	mlx_put_image_to_window(cub->mlx, cub->mlxwin, cub->mlximg.img, 0, 0);
 	put_minimap(cub);
 	/* mlx_loop_hook(cub->mlx, NULL, NULL); */
->>>>>>> main
 	mlx_loop_hook(cub->mlx, *mouse_input, cub);
 	mlx_hook(cub->mlxwin, 17, 1L<<17, destroy, cub); 
 	mlx_hook(cub->mlxwin, 2, 1L<<0, inputs, cub); 

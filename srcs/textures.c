@@ -6,11 +6,7 @@
 /*   By: pfaria-d <pfaria-d@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/28 16:31:58 by pfaria-d          #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2023/06/29 10:06:55 by pfaria-d         ###   ########.fr       */
-=======
 /*   Updated: 2023/06/29 13:57:35 by pfaria-d         ###   ########.fr       */
->>>>>>> main
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,13 +27,6 @@ int		get_pixel_color(t_data *data, int x, int y)
 void	xpm_to_img(t_cub *cub)
 {
 	cub->e_data = malloc(sizeof(t_data));
-<<<<<<< HEAD
-	cub->e_data->img = mlx_xpm_file_to_image(cub->mlx, cub->e_texture, &cub->e_data->x, &cub->e_data->y);
-	cub->e_data->addr = mlx_get_data_addr(cub->e_data->img, &cub->e_data->bits_per_pixel, &cub->e_data->line_length, &cub->e_data->endian);
-	/* cub->w_img = mlx_xpm_file_to_image(cub->mlx, cub->w_texture, 0, 0); */
-	/* cub->s_img = mlx_xpm_file_to_image(cub->mlx, cub->s_texture, 0, 0); */
-	/* cub->n_img = mlx_xpm_file_to_image(cub->mlx, cub->n_texture, 0, 0); */
-=======
 	cub->w_data = malloc(sizeof(t_data));
 	cub->s_data = malloc(sizeof(t_data));
 	cub->n_data = malloc(sizeof(t_data));
@@ -69,5 +58,4 @@ void	xpm_to_img(t_cub *cub)
 		exit(0);
 	}
 	cub->s_data->addr = mlx_get_data_addr(cub->s_data->img, &cub->s_data->bits_per_pixel, &cub->s_data->line_length, &cub->s_data->endian);
->>>>>>> main
 }

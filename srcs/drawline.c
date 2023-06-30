@@ -6,11 +6,7 @@
 /*   By: pfaria-d <pfaria-d@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/28 14:22:07 by pfaria-d          #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2023/06/29 10:06:31 by pfaria-d         ###   ########.fr       */
-=======
 /*   Updated: 2023/06/30 14:48:14 by pfaria-d         ###   ########.fr       */
->>>>>>> main
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,18 +16,6 @@ void	drawline(int i, t_cub *cub)
 {
 	int	y;
 
-<<<<<<< HEAD
-	getcolor(cub);
-	y = 0;
-	while (y < cub->drawstart)
-		my_mlx_pixel_put(&cub->mlximg, i, y++, getrgb(cub->c_color[0], cub->c_color[1], cub->c_color[2]));
-	y = cub->drawstart;
-	while (y < cub->drawend)
-	{
-		my_mlx_pixel_put(&cub->mlximg, i, y, get_pixel_color(cub->e_data, i, y));
-		y++;
-	}
-=======
 	y = 0;
 	while (y < cub->drawstart)
 		my_mlx_pixel_put(&cub->mlximg, i, y++, getrgb(cub->c_color[0], cub->c_color[1], cub->c_color[2]));
@@ -64,7 +48,6 @@ void	drawline(int i, t_cub *cub)
 			cub->texpos += cub->texstep;
 			my_mlx_pixel_put(&cub->mlximg, i, y, get_pixel_color(cub->n_data, cub->tex.x, cub->tex.y));
 		}
->>>>>>> main
 	while (y < cub->map_height)
 		my_mlx_pixel_put(&cub->mlximg, i, y++, getrgb(cub->f_color[0], cub->f_color[1], cub->f_color[2]));
 }

@@ -69,7 +69,7 @@ typedef struct s_cub {
   int				f_color[3];
   unsigned int		nb_of_file_lines;
   char				p_orient;
-  struct s_point	p;
+  struct			s_point p;
   int				map_width;
   int				map_height;
   struct s_point	pdir;
@@ -98,13 +98,8 @@ typedef struct s_cub {
   int				x;
   int				y;
   t_data			*minimap;
-<<<<<<< HEAD
-  int				max_hei;
-  int				max_wid;
-=======
   int				max_wid;
   int				max_hei;
->>>>>>> main
 } t_cub;
 
 /***\ errors \***/

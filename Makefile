@@ -19,11 +19,7 @@ NAME = cub3D
 
 CC = gcc
 
-<<<<<<< HEAD
-CFLAGS = -Wall -Wextra -Werror #-fsanitize=address -g 
-=======
 CFLAGS = -Wall -Wextra -Werror 
->>>>>>> main
 
 SRC_DIR = srcs
 

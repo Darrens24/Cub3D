@@ -4,11 +4,7 @@ void free_array(char **array) {
   int i;
 
   if (!array)
-<<<<<<< HEAD
-	  return ;
-=======
 	  return;
->>>>>>> main
   i = 0;
   while (array[i])
     free(array[i++]);
@@ -27,7 +23,8 @@ void free_and_exit(t_parser *parser, t_cub *cub) {
   free(cub->s_texture);
   free(cub->n_texture);
   free_array(cub->map_file);
-  free_array(cub->map);
+  if (cub->map)
+	  free_array(cub->map);
   free(parser);
   free(cub);
   printf("Error\nBad map format\n");
