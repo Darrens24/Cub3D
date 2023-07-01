@@ -85,7 +85,7 @@ typedef struct s_cub {
   char				side;
   void				*mlx;
   void				*mlxwin;
-  t_data			mlximg;
+  t_data			*mlximg;
   int				lineheight;
   int				drawstart;
   int				drawend;
@@ -100,6 +100,12 @@ typedef struct s_cub {
   t_data			*minimap;
   int				max_wid;
   int				max_hei;
+  t_data			*door0;
+  t_data			*door1;
+  t_data			*door2;
+  t_data			*door3;
+  int				door;
+  struct s_point	door_pos;
 } t_cub;
 
 /***\ errors \***/

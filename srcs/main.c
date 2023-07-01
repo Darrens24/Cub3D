@@ -25,9 +25,15 @@ void	squarejumper(t_cub *cub)
 		cub->mapc.y += cub->step.y;
 		cub->side = 1;
 	}
-	if (cub->map[cub->mapc.x][cub->mapc.y] > '0')
+	if (cub->map[cub->mapc.x][cub->mapc.y] != '0')
+	{
 		cub->wall = 1;
+		if (cub->map[cub->mapc.x][cub->mapc.y] == 'D')
+			cub->door = 1;
+	}
 }
+
+/* static void hooks(t_cub *cub) */
 
 int main(int ac, char **av) {
   t_cub *cub;
@@ -37,23 +43,25 @@ int main(int ac, char **av) {
   }
   cub = malloc(sizeof(t_cub));
   initialize_cube(cub);
-  if (!download_map(cub, av[1]) || !parse_map_format(cub))
-    return (free(cub), -1);
-	cub->map_width = 1280;
-	cub->map_height = 960;
-	mlxsetup(cub);
-	cub->p.x += 0.1;
-	cub->p.y += 0.1;
-	xpm_to_img(cub);
-	getplayerdir(cub);
-	/* putpixel(cub); */
-	mlx_put_image_to_window(cub->mlx, cub->mlxwin, cub->mlximg.img, 0, 0);
-	/* put_minimap(cub); */
-	mlx_loop_hook(cub->mlx, NULL, NULL);
-	mlx_loop_hook(cub->mlx, *mouse_input, cub);
-	mlx_hook(cub->mlxwin, 17, 1L<<17, destroy, cub); 
-	mlx_hook(cub->mlxwin, 2, 1L<<0, inputs, cub); 
-	mlx_loop(cub->mlx);
-  free_cube(cub);
-  return (0);
+cub->minimap = malloc(sizeof(t_data));
+cub->mlximg = malloc(sizeof(t_data));
+if (!download_map(cub, av[1]) || !parse_map_format(cub))
+	return (free(cub), -1);
+cub->map_width = 1280;
+cub->map_height = 960;
+mlxsetup(cub);
+cub->p.x += 0.1;
+cub->p.y += 0.1;
+xpm_to_img(cub);
+getplayerdir(cub);
+putpixel(cub);
+mlx_put_image_to_window(cub->mlx, cub->mlxwin, cub->mlximg->img, 0, 0);
+put_minimap(cub);
+/* mlx_loop_hook(cub->mlx, NULL, NULL); */
+mlx_hook(cub->mlxwin, 17, 1L<<17, destroy, cub); 
+mlx_hook(cub->mlxwin, 2, 1L<<0, inputs, cub); 
+mlx_loop_hook(cub->mlx, *mouse_input, cub);
+mlx_loop(cub->mlx);
+free_cube(cub);
+return (0);
 }

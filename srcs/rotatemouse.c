@@ -6,7 +6,7 @@
 /*   By: pfaria-d <pfaria-d@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/28 14:18:46 by pfaria-d          #+#    #+#             */
-/*   Updated: 2023/06/30 14:51:12 by pfaria-d         ###   ########.fr       */
+/*   Updated: 2023/07/01 14:39:01 by eleleux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,11 +50,12 @@ int	mouse_input(t_cub *cub)
 	else if (x < cub->map_height / 2)
 		rotateleft(cub);
 	mlx_mouse_move(cub->mlxwin, cub->map_height / 2, cub->map_width /2);
-	mlx_destroy_image(cub->mlx, cub->mlximg.img);
-	cub->mlximg.img = mlx_new_image(cub->mlx, cub->map_width, cub->map_height);
-	cub->mlximg.addr = mlx_get_data_addr(cub->mlximg.img, &cub->mlximg.bits_per_pixel, &cub->mlximg.line_length, &cub->mlximg.endian);
+	mlx_destroy_image(cub->mlx, cub->mlximg->img);
+	cub->mlximg->img = mlx_new_image(cub->mlx, cub->map_width, cub->map_height);
+	cub->mlximg->addr = mlx_get_data_addr(cub->mlximg->img, &cub->mlximg->bits_per_pixel, &cub->mlximg->line_length, &cub->mlximg->endian);
 	putpixel(cub);
-	mlx_put_image_to_window(cub->mlx, cub->mlxwin, cub->mlximg.img, 0, 0);
+	mlx_put_image_to_window(cub->mlx, cub->mlxwin, cub->mlximg->img, 0, 0);
+	mlx_destroy_image(cub->mlx, cub->minimap->img);
 	put_minimap(cub);
 	return (0);
 }

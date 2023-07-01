@@ -6,7 +6,7 @@
 /*   By: pfaria-d <pfaria-d@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/28 14:20:29 by pfaria-d          #+#    #+#             */
-/*   Updated: 2023/07/01 11:57:16 by eleleux          ###   ########.fr       */
+/*   Updated: 2023/07/01 17:51:18 by eleleux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,19 @@ int	destroy(t_cub *cub)
 	exit(0);
 }
 
+static float	absolute(float diff)
+{
+	if (diff < 0)
+		diff *= -1;
+	return (diff);
+}
+
+int	hodoor(t_cub *cub)
+{
+	if (absolute())
+	return (0);
+}
+
 int	inputs(int key, t_cub *cub)
 {
 	if (key == 13)
@@ -43,13 +56,14 @@ int	inputs(int key, t_cub *cub)
 		rotateright(cub);
 	else if (key == 53)
 		destroy(cub);
-	else if (key == 53)
-		destroy(cub);
-	/* mlx_destroy_image(cub->mlx, cub->mlximg.img); */
-	/* cub->mlximg.img = mlx_new_image(cub->mlx, cub->map_width, cub->map_height); */
-	/* cub->mlximg.addr = mlx_get_data_addr(cub->mlximg.img, &cub->mlximg.bits_per_pixel, &cub->mlximg.line_length, &cub->mlximg.endian); */
+	else if (key == 31)
+		hodoor(cub);
+	mlx_destroy_image(cub->mlx, cub->mlximg->img);
+	cub->mlximg->img = mlx_new_image(cub->mlx, cub->map_width, cub->map_height);
+	cub->mlximg->addr = mlx_get_data_addr(cub->mlximg->img, &cub->mlximg->bits_per_pixel, &cub->mlximg->line_length, &cub->mlximg->endian);
 	putpixel(cub);
-	mlx_put_image_to_window(cub->mlx, cub->mlxwin, cub->mlximg.img, 0, 0);
+	mlx_put_image_to_window(cub->mlx, cub->mlxwin, cub->mlximg->img, 0, 0);
+	mlx_destroy_image(cub->mlx, cub->minimap->img);
 	put_minimap(cub);
 	return (0);
 }

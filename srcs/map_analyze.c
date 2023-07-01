@@ -68,7 +68,7 @@ int map_line_conformity(char *map_line) {
   while (map_line[++j]) {
     if (map_line[j] != '0' && map_line[j] != '1' && map_line[j] != 'E' &&
         map_line[j] != 'W' && map_line[j] != 'S' && map_line[j] != 'N' &&
-        map_line[j] != ' ') {
+        map_line[j] != ' ' && map_line[j] != 'D') {
       return (FALSE);
     }
   }
@@ -91,6 +91,31 @@ int duplicate_player(char *map_line, t_parser *parser) {
   return (TRUE);
 }
 
+int door_conformity(char **map, t_cub *cub)
+{
+	int	i;
+	int j;
+
+	i = 0;
+	while (map[i])
+	{
+		j = 0;
+		while (map[i][j])
+		{
+			if (map[i][j] == 'D')
+			{
+				if (!map[i][j + 1] || !map[i][j - 1] || !map[i + 1][j] || !map[i - 1][j])
+					return (FALSE);
+				cub->door_pos.x = j;
+				cub->door_pos.y = i;
+			}
+			j++;
+		}
+		i++;
+	}
+	return (TRUE);
+}
+
 int map_analyze(t_parser *parser, t_cub *cub) {
   int i;
 
@@ -103,7 +128,7 @@ int map_analyze(t_parser *parser, t_cub *cub) {
         !duplicate_player(parser->map[i], parser))
       return (FALSE);
   }
-  if (parser->tmp_p != 1 || !is_closing_map(parser->map, cub)) {
+  if (parser->tmp_p != 1 || !door_conformity(parser->map, cub) || !is_closing_map(parser->map, cub)) {
     return (FALSE);
   }
   cub->p_orient = parser->orient;

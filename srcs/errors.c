@@ -150,6 +150,7 @@ int parse_map_format(t_cub *cub) {
   i = -1;
   while (parser->map[++i])
     cub->map[i] = ft_strtrim(parser->map[i], "\n");
+  cub->map[i] = NULL;
   free_parser_memory(parser);
   free_array(cub->map_file);
   return (TRUE);

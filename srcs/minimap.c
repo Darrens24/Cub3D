@@ -41,7 +41,7 @@ void	mini_floordraw(t_cub *cub, int *x, int *y)
 		while (j < 10)
 		{
 			/* printf("mini %p\n x %d\n y%d\ncolor%d\n", cub->minimap, *x, *y, create_trgb(50, 88, 41, 0)); */
-			my_mlx_pixel_put(cub->minimap, *x, *y, create_trgb(100, 225, 198, 153));
+			my_mlx_pixel_put(cub->minimap, *x, *y, create_trgb(90, 225, 198, 153));
 			*x += 1;
 			j++;
 		}
@@ -116,24 +116,21 @@ void	put_minimap(t_cub *cub)
 	int x;
 	int y;
 
-	cub->minimap = malloc(sizeof(t_data));
-	cub->minimap->img = mlx_new_image(cub->mlx, cub->max_wid * 10, cub->max_hei * 10);
-	cub->minimap->addr = mlx_get_data_addr(cub->minimap->img, &cub->minimap->bits_per_pixel, &cub->minimap->line_length, &cub->minimap->endian);
 	i = 0;
 	j = 0;
 	x = 0;
 	y = 0;
+	cub->minimap->img = mlx_new_image(cub->mlx, cub->max_wid * 10, cub->max_hei * 10);
+	cub->minimap->addr = mlx_get_data_addr(cub->minimap->img, &cub->minimap->bits_per_pixel, &cub->minimap->line_length, &cub->minimap->endian);
 	while (cub->map[i])
 	{
 		j = 0;
-		while (cub->map[i][j])
+		while (j < (int)ft_strlen(cub->map[i]))
 		{
-			if (cub->map[i][j] == '1')
-				mini_walldraw(cub, &x, &y);
-			else if (cub->map[i][j] == '0')
+			if (cub->map[i][j] == '0')
 				mini_floordraw(cub, &x, &y);
 			else
-				mini_voiddraw(cub, &x, &y);
+				mini_walldraw(cub, &x, &y);
 
 			y -= 10;
 			x += 10;
