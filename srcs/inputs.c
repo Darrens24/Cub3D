@@ -6,7 +6,7 @@
 /*   By: pfaria-d <pfaria-d@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/28 14:20:29 by pfaria-d          #+#    #+#             */
-/*   Updated: 2023/07/01 17:51:18 by eleleux          ###   ########.fr       */
+/*   Updated: 2023/07/01 18:12:48 by eleleux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,10 +34,12 @@ static float	absolute(float diff)
 	return (diff);
 }
 
-int	hodoor(t_cub *cub)
+void	hodoor(t_cub *cub)
 {
-	if (absolute())
-	return (0);
+	printf("x diff is %f\ny diff is %f\n", absolute(cub->door_pos.x - cub->p.y), absolute(cub->door_pos.y - cub->p.x));
+	if (absolute(cub->door_pos.x - cub->p.y) > 3 || absolute(cub->door_pos.y - cub->p.x) > 2)
+		return ;
+	printf("HODOOOOR\n");
 }
 
 int	inputs(int key, t_cub *cub)
