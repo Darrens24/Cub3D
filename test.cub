@@ -1,14 +1,14 @@
-EA ./textures/walkstone.xpm
-NO ./textures/gemov1.xpm
-SO ./textures/lavaf1.xpm
-F 124,252,0
-C 135,206,235
+EA ./textures/Chocoeastsquare.xpm
+NO ./textures/Choconorthsquare.xpm
+SO ./textures/Chocosouth.xpm
+F 88,41,0
+C 225,198,153
 
-WE ./textures/bookshelf_1.xpm
+WE ./textures/Chocowest.xpm
 
 111111111111
 10101010101011
-11111111111S11
-11111111000001
-11111111110001 
+11100000000S11
+11111110000001
+11111000010001 
     1111111111

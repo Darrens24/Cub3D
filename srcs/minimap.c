@@ -18,7 +18,7 @@ void	mini_walldraw(t_cub *cub, int *x, int *y)
 		while (j < 10)
 		{
 			/* printf("mini %p\n x %d\n y%d\ncolor%d\n", cub->minimap, *x, *y, create_trgb(50, 88, 41, 0)); */
-			my_mlx_pixel_put(cub->minimap, *x, *y, create_trgb(90, 88, 41, 0));
+			my_mlx_pixel_put(cub->minimap, *x, *y, create_trgb(0, 0, 0, 0));
 			*x += 1;
 			j++;
 		}
@@ -41,7 +41,7 @@ void	mini_floordraw(t_cub *cub, int *x, int *y)
 		while (j < 10)
 		{
 			/* printf("mini %p\n x %d\n y%d\ncolor%d\n", cub->minimap, *x, *y, create_trgb(50, 88, 41, 0)); */
-			my_mlx_pixel_put(cub->minimap, *x, *y, create_trgb(90, 225, 198, 153));
+			my_mlx_pixel_put(cub->minimap, *x, *y, create_trgb(100, 225, 198, 153));
 			*x += 1;
 			j++;
 		}
@@ -55,6 +55,7 @@ void	mini_voiddraw(t_cub *cub, int *x, int *y)
 {
 	int i;
 	int j;
+	(void)cub;
 
 	i = 0;
 	j = 0;
@@ -64,7 +65,7 @@ void	mini_voiddraw(t_cub *cub, int *x, int *y)
 		while (j < 10)
 		{
 			/* printf("mini %p\n x %d\n y%d\ncolor%d\n", cub->minimap, *x, *y, create_trgb(50, 88, 41, 0)); */
-			my_mlx_pixel_put(cub->minimap, *x, *y, create_trgb(90, 0, 0, 0));
+			/* my_mlx_pixel_put(cub->minimap, *x, *y, create_trgb(100, 225, 198, 153)); */
 			*x += 1;
 			j++;
 		}
@@ -90,8 +91,8 @@ void	put_player_minimap(t_cub *cub)
 
 	i = 0;
 	j = 0;
-	y = cub->p.x * 10 + 1;
-	x = cub->p.y * 10 + 1;
+	y = cub->p.x * 10;
+	x = cub->p.y * 10;
 	while (i < 5)
 	{
 		j = 0;
@@ -136,7 +137,6 @@ void	put_minimap(t_cub *cub)
 
 			y -= 10;
 			x += 10;
-			/* printf("x after draw is %d\ny after draw is %d\n", x, y); */
 			j++;
 		}
 		y += 10;

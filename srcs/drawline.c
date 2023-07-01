@@ -6,7 +6,7 @@
 /*   By: pfaria-d <pfaria-d@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/28 14:22:07 by pfaria-d          #+#    #+#             */
-/*   Updated: 2023/06/30 14:48:14 by pfaria-d         ###   ########.fr       */
+/*   Updated: 2023/07/01 11:58:10 by eleleux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,5 +72,5 @@ void	putpixel(t_cub *cub)
 		drawline(i, cub);
 		i++;
 	}
-	put_minimap(cub);
+	/* put_minimap(cub); */
 }

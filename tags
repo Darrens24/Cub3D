@@ -1,0 +1,418 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+BLUE	Libft/Makefile	/^BLUE='\\033[0;34m'$/;"	m
+BLUE	Makefile	/^BLUE='\\033[0;34m'$/;"	m
+BUFFER_SIZE	Libft/get_next_line.h	/^#  define BUFFER_SIZE /;"	d
+CC	Libft/Makefile	/^CC = gcc$/;"	m
+CC	Makefile	/^CC = gcc$/;"	m
+CFLAGS	Libft/Makefile	/^CFLAGS = -Wall -Wextra -Werror$/;"	m
+CFLAGS	Makefile	/^CFLAGS = -Wall -Wextra -Werror $/;"	m
+CUB3D_H	headers/cub3d.h	/^#define CUB3D_H$/;"	d
+CYAN	Libft/Makefile	/^CYAN='\\033[0;36m'$/;"	m
+CYAN	Makefile	/^CYAN='\\033[0;36m'$/;"	m
+DARKGRAY	Libft/Makefile	/^DARKGRAY='\\033[1;30m'$/;"	m
+DARKGRAY	Makefile	/^DARKGRAY='\\033[1;30m'$/;"	m
+DECIMAL	Libft/ft_printf.h	/^# define DECIMAL /;"	d
+ERR_DATA_FILTER	mlx/mlx_png.c	/^#define	ERR_DATA_FILTER	/;"	d	file:
+ERR_DATA_MISMATCH	mlx/mlx_png.c	/^#define	ERR_DATA_MISMATCH	/;"	d	file:
+ERR_MAGIC_SIZE	mlx/mlx_png.c	/^#define	ERR_MAGIC_SIZE	/;"	d	file:
+ERR_MAGIC_WRONG	mlx/mlx_png.c	/^#define	ERR_MAGIC_WRONG	/;"	d	file:
+ERR_STRUCT_CRC	mlx/mlx_png.c	/^#define	ERR_STRUCT_CRC	/;"	d	file:
+ERR_STRUCT_DAT	mlx/mlx_png.c	/^#define	ERR_STRUCT_DAT	/;"	d	file:
+ERR_STRUCT_END	mlx/mlx_png.c	/^#define	ERR_STRUCT_END	/;"	d	file:
+ERR_STRUCT_HDR	mlx/mlx_png.c	/^#define	ERR_STRUCT_HDR	/;"	d	file:
+ERR_STRUCT_INCIMPL	mlx/mlx_png.c	/^#define	ERR_STRUCT_INCIMPL /;"	d	file:
+ERR_STRUCT_INCOMPLETE	mlx/mlx_png.c	/^#define	ERR_STRUCT_INCOMPLETE	/;"	d	file:
+ERR_STRUCT_MISSCHK	mlx/mlx_png.c	/^#define	ERR_STRUCT_MISSCHK	/;"	d	file:
+ERR_ZLIB	mlx/mlx_png.c	/^#define	ERR_ZLIB	/;"	d	file:
+FALSE	headers/cub3d.h	/^#define FALSE /;"	d
+FONT_HEIGHT	mlx/mlx_int.h	/^#define	FONT_HEIGHT	/;"	d
+FONT_WIDTH	mlx/mlx_int.h	/^#define FONT_WIDTH	/;"	d
+FT_PRINTF_H	Libft/ft_printf.h	/^# define FT_PRINTF_H$/;"	d
+GET_NEXT_LINE_H	Libft/get_next_line.h	/^# define GET_NEXT_LINE_H$/;"	d
+GREEN	Libft/Makefile	/^GREEN='\\033[0;32m'$/;"	m
+GREEN	Makefile	/^GREEN='\\033[0;32m'$/;"	m
+HEXALOW	Libft/ft_printf.h	/^# define HEXALOW /;"	d
+HEXAUP	Libft/ft_printf.h	/^# define HEXAUP /;"	d
+LIBFT_H	Libft/libft.h	/^#define LIBFT_H$/;"	d
+LIGHTBLUE	Libft/Makefile	/^LIGHTBLUE='\\033[1;34m'$/;"	m
+LIGHTBLUE	Makefile	/^LIGHTBLUE='\\033[1;34m'$/;"	m
+LIGHTCYAN	Libft/Makefile	/^LIGHTCYAN='\\033[1;36m'$/;"	m
+LIGHTCYAN	Makefile	/^LIGHTCYAN='\\033[1;36m'$/;"	m
+LIGHTGRAY	Libft/Makefile	/^LIGHTGRAY='\\033[0;37m'$/;"	m
+LIGHTGRAY	Makefile	/^LIGHTGRAY='\\033[0;37m'$/;"	m
+LIGHTGREEN	Libft/Makefile	/^LIGHTGREEN='\\033[1;32m'$/;"	m
+LIGHTGREEN	Makefile	/^LIGHTGREEN='\\033[1;32m'$/;"	m
+LIGHTPURPLE	Libft/Makefile	/^LIGHTPURPLE='\\033[1;35m'$/;"	m
+LIGHTPURPLE	Makefile	/^LIGHTPURPLE='\\033[1;35m'$/;"	m
+LIGHTRED	Libft/Makefile	/^LIGHTRED='\\033[1;31m'$/;"	m
+LIGHTRED	Makefile	/^LIGHTRED='\\033[1;31m'$/;"	m
+MAX_EVENT	mlx/mlx_int.h	/^#define	MAX_EVENT	/;"	d
+MAX_PIXEL_NB	mlx/mlx_int.h	/^#define MAX_PIXEL_NB	/;"	d
+MLX_H	mlx/mlx.h	/^#define	MLX_H$/;"	d
+NAME	Libft/Makefile	/^NAME = libft.a$/;"	m
+NAME	Makefile	/^NAME = cub3D$/;"	m
+NB_TEXTURES	headers/cub3d.h	/^#define NB_TEXTURES /;"	d
+NOCOLOR	Libft/Makefile	/^NOCOLOR='\\033[0m'$/;"	m
+NOCOLOR	Makefile	/^NOCOLOR='\\033[0m'$/;"	m
+NOM	mlx/Makefile	/^NOM=libmlx.a$/;"	m
+OBJ	Libft/Makefile	/^OBJ = $(SRC:.c=.o)$/;"	m
+OBJ	mlx/Makefile	/^OBJ=$(OBJ1:.m=.o)$/;"	m
+OBJ1	mlx/Makefile	/^OBJ1=$(SRC:.c=.o)$/;"	m
+OBJS	Makefile	/^OBJS = $(patsubst $(SRC_DIR)\/%.c,$(OBJ_DIR)\/%.o,$(SRCS))$/;"	m
+OBJ_DIR	Makefile	/^OBJ_DIR = objs$/;"	m
+ORANGE	Libft/Makefile	/^ORANGE='\\033[0;33m'$/;"	m
+ORANGE	Makefile	/^ORANGE='\\033[0;33m'$/;"	m
+PNG_HDR_SIZE	mlx/mlx_png.c	/^#define PNG_HDR_SIZE	/;"	d	file:
+PNG_MAGIC_SIZE	mlx/mlx_png.c	/^#define	PNG_MAGIC_SIZE	/;"	d	file:
+PURPLE	Libft/Makefile	/^PURPLE='\\033[0;35m'$/;"	m
+PURPLE	Makefile	/^PURPLE='\\033[0;35m'$/;"	m
+RED	Libft/Makefile	/^RED='\\033[0;31m'$/;"	m
+RED	Makefile	/^RED='\\033[0;31m'$/;"	m
+RETURN	mlx/mlx_xpm.c	/^#define	RETURN	/;"	d	file:
+SRC	Libft/Makefile	/^SRC = ft_atoi.c \\$/;"	m
+SRC	mlx/Makefile	/^SRC= mlx_shaders.c mlx_new_window.m mlx_init_loop.m mlx_new_image.m mlx_xpm.c mlx_int_str_to_wordtab.c$/;"	m
+SRCS	Makefile	/^SRCS = 	$(SRC_DIR)\/main.c \\$/;"	m
+SRC_DIR	Makefile	/^SRC_DIR = srcs$/;"	m
+TRUE	headers/cub3d.h	/^#define TRUE /;"	d
+UNIQ_BPP	mlx/mlx_int.h	/^#define UNIQ_BPP	/;"	d
+WHITE	Libft/Makefile	/^WHITE='\\033[1;37m'$/;"	m
+WHITE	Makefile	/^WHITE='\\033[1;37m'$/;"	m
+YELLOW	Libft/Makefile	/^YELLOW='\\033[1;33m'$/;"	m
+YELLOW	Makefile	/^YELLOW='\\033[1;33m'$/;"	m
+Z_CHUNK	mlx/mlx_png.c	/^#define	Z_CHUNK	/;"	d	file:
+addr	headers/cub3d.h	/^	char	*addr;$/;"	m	struct:s_data
+allowed_ids	headers/cub3d.h	/^  char *allowed_ids[6];$/;"	m	struct:s_parser
+already	Libft/ft_putnbr_base_fd.c	/^static int	already(char *str)$/;"	f	file:
+already	Libft/ft_sizebase_fd.c	/^static int	already(char *str)$/;"	f	file:
+appid	mlx/mlx_int.h	/^  void			*appid;$/;"	m	struct:mlx_ptr_s
+bits_per_pixel	headers/cub3d.h	/^	int		bits_per_pixel;$/;"	m	struct:s_data
+bpp	mlx/mlx_png.c	/^  int		bpp;$/;"	m	struct:png_info_s	file:
+buffer	mlx/mlx_int.h	/^  char			*buffer;$/;"	m	struct:mlx_img_list_s
+bytes_per_pixel	mlx/font.c	/^  unsigned int 	 bytes_per_pixel; \/* 2:RGB16, 3:RGB, 4:RGBA *\/ $/;"	m	struct:__anon1	file:
+c_color	headers/cub3d.h	/^  int				c_color[3];$/;"	m	struct:s_cub
+camerax	headers/cub3d.h	/^  float				camerax;$/;"	m	struct:s_cub
+ceil	headers/cub3d.h	/^  int ceil;$/;"	m	struct:s_textures_check
+check_if_all_textures	srcs/errors.c	/^int check_if_all_textures(t_parser *parser) {$/;"	f
+check_store_color_format	srcs/errors.c	/^int check_store_color_format(char mode, t_cub *cub, int colors[3],$/;"	f
+check_store_path_format	srcs/errors.c	/^int check_store_path_format(t_cub *cub, int j, char *paths[4], char **texture) {$/;"	f
+cleanstock	Libft/get_next_line.c	/^char	*cleanstock(char *stock)$/;"	f
+col	mlx/mlx_xpm.c	/^  int           col;$/;"	m	struct:s_xpm_col	file:
+color	mlx/mlx_png.c	/^  int		color;$/;"	m	struct:png_info_s	file:
+color	mlx/mlx_xpm.c	/^  int   color;$/;"	m	struct:s_col_name	file:
+colors	headers/cub3d.h	/^  int colors[3];$/;"	m	struct:s_parser
+content	Libft/libft.h	/^  void *content;$/;"	m	struct:s_list
+copystock	Libft/get_next_line.c	/^char	*copystock(char *stock, char *buffer)$/;"	f
+correct_file_extension	srcs/errors.c	/^int correct_file_extension(char *name) {$/;"	f
+count_set	Libft/ft_strtrim.c	/^int	count_set(char const *s1, char const *set)$/;"	f
+crc_table	mlx/mlx_png.c	/^unsigned long crc_table[256] = { 0, 0x77073096, 0xee0e612c, 0x990951ba, 0x76dc419, 0x706af48f, 0xe963a535, 0x9e6495a3, 0xedb8832, 0x79dcb8a4, 0xe0d5e91e, 0x97d2d988, 0x9b64c2b, 0x7eb17cbd, 0xe7b82d07, 0x90bf1d91, 0x1db71064, 0x6ab020f2, 0xf3b97148, 0x84be41de, 0x1adad47d, 0x6ddde4eb, 0xf4d4b551, 0x83d385c7, 0x136c9856, 0x646ba8c0, 0xfd62f97a, 0x8a65c9ec, 0x14015c4f, 0x63066cd9, 0xfa0f3d63, 0x8d080df5, 0x3b6e20c8, 0x4c69105e, 0xd56041e4, 0xa2677172, 0x3c03e4d1, 0x4b04d447, 0xd20d85fd, 0xa50ab56b, 0x35b5a8fa, 0x42b2986c, 0xdbbbc9d6, 0xacbcf940, 0x32d86ce3, 0x45df5c75, 0xdcd60dcf, 0xabd13d59, 0x26d930ac, 0x51de003a, 0xc8d75180, 0xbfd06116, 0x21b4f4b5, 0x56b3c423, 0xcfba9599, 0xb8bda50f, 0x2802b89e, 0x5f058808, 0xc60cd9b2, 0xb10be924, 0x2f6f7c87, 0x58684c11, 0xc1611dab, 0xb6662d3d, 0x76dc4190, 0x1db7106, 0x98d220bc, 0xefd5102a, 0x71b18589, 0x6b6b51f, 0x9fbfe4a5, 0xe8b8d433, 0x7807c9a2, 0xf00f934, 0x9609a88e, 0xe10e9818, 0x7f6a0dbb, 0x86d3d2d, 0x91646c97, 0xe6635c01, 0x6b6b51f4, 0x1c6c6162, 0x856530d8, 0xf262004e, 0x6c0695ed, 0x1b01a57b, 0x8208f4c1, 0xf50fc457, 0x65b0d9c6, 0x12b7e950, 0x8bbeb8ea, 0xfcb9887c, 0x62dd1ddf, 0x15da2d49, 0x8cd37cf3, 0xfbd44c65, 0x4db26158, 0x3ab551ce, 0xa3bc0074, 0xd4bb30e2, 0x4adfa541, 0x3dd895d7, 0xa4d1c46d, 0xd3d6f4fb, 0x4369e96a, 0x346ed9fc, 0xad678846, 0xda60b8d0, 0x44042d73, 0x33031de5, 0xaa0a4c5f, 0xdd0d7cc9, 0x5005713c, 0x270241aa, 0xbe0b1010, 0xc90c2086, 0x5768b525, 0x206f85b3, 0xb966d409, 0xce61e49f, 0x5edef90e, 0x29d9c998, 0xb0d09822, 0xc7d7a8b4, 0x59b33d17, 0x2eb40d81, 0xb7bd5c3b, 0xc0ba6cad, 0xedb88320, 0x9abfb3b6, 0x3b6e20c, 0x74b1d29a, 0xead54739, 0x9dd277af, 0x4db2615, 0x73dc1683, 0xe3630b12, 0x94643b84, 0xd6d6a3e, 0x7a6a5aa8, 0xe40ecf0b, 0x9309ff9d, 0xa00ae27, 0x7d079eb1, 0xf00f9344, 0x8708a3d2, 0x1e01f268, 0x6906c2fe, 0xf762575d, 0x806567cb, 0x196c3671, 0x6e6b06e7, 0xfed41b76, 0x89d32be0, 0x10da7a5a, 0x67dd4acc, 0xf9b9df6f, 0x8ebeeff9, 0x17b7be43, 0x60b08ed5, 0xd6d6a3e8, 0xa1d1937e, 0x38d8c2c4, 0x4fdff252, 0xd1bb67f1, 0xa6bc5767, 0x3fb506dd, 0x48b2364b, 0xd80d2bda, 0xaf0a1b4c, 0x36034af6, 0x41047a60, 0xdf60efc3, 0xa867df55, 0x316e8eef, 0x4669be79, 0xcb61b38c, 0xbc66831a, 0x256fd2a0, 0x5268e236, 0xcc0c7795, 0xbb0b4703, 0x220216b9, 0x5505262f, 0xc5ba3bbe, 0xb2bd0b28, 0x2bb45a92, 0x5cb36a04, 0xc2d7ffa7, 0xb5d0cf31, 0x2cd99e8b, 0x5bdeae1d, 0x9b64c2b0, 0xec63f226, 0x756aa39c, 0x26d930a, 0x9c0906a9, 0xeb0e363f, 0x72076785, 0x5005713, 0x95bf4a82, 0xe2b87a14, 0x7bb12bae, 0xcb61b38, 0x92d28e9b, 0xe5d5be0d, 0x7cdcefb7, 0xbdbdf21, 0x86d3d2d4, 0xf1d4e242, 0x68ddb3f8, 0x1fda836e, 0x81be16cd, 0xf6b9265b, 0x6fb077e1, 0x18b74777, 0x88085ae6, 0xff0f6a70, 0x66063bca, 0x11010b5c, 0x8f659eff, 0xf862ae69, 0x616bffd3, 0x166ccf45, 0xa00ae278, 0xd70dd2ee, 0x4e048354, 0x3903b3c2, 0xa7672661, 0xd06016f7, 0x4969474d, 0x3e6e77db, 0xaed16a4a, 0xd9d65adc, 0x40df0b66, 0x37d83bf0, 0xa9bcae53, 0xdebb9ec5, 0x47b2cf7f, 0x30b5ffe9, 0xbdbdf21c, 0xcabac28a, 0x53b39330, 0x24b4a3a6, 0xbad03605, 0xcdd70693, 0x54de5729, 0x23d967bf, 0xb3667a2e, 0xc4614ab8, 0x5d681b02, 0x2a6f2b94, 0xb40bbe37, 0xc30c8ea1, 0x5a05df1b, 0x2d02ef8d };$/;"	v
+create_trgb	srcs/minimap.c	/^int	create_trgb(int t, int r, int g, int b)$/;"	f
+deltadist	headers/cub3d.h	/^  struct s_point	deltadist;$/;"	m	struct:s_cub	typeref:struct:s_cub::s_point
+depth	mlx/mlx_png.c	/^  int		depth;$/;"	m	struct:png_info_s	file:
+destroy	srcs/inputs.c	/^int	destroy(t_cub *cub)$/;"	f
+display_log	mlx/mlx_shaders.c	/^void display_log(GLuint object, void (*param_func)(), void (*getlog_func)())$/;"	f
+download_map	srcs/data.c	/^int download_map(t_cub *cub, char *av1) {$/;"	f
+drawend	headers/cub3d.h	/^  int				drawend;$/;"	m	struct:s_cub
+drawline	srcs/drawline.c	/^void	drawline(int i, t_cub *cub)$/;"	f
+drawstart	headers/cub3d.h	/^  int				drawstart;$/;"	m	struct:s_cub
+duplicate	Libft/ft_split.c	/^static char	*duplicate(char *src, int start, int end)$/;"	f	file:
+duplicate	Libft/ft_split_slash.c	/^static char	*duplicate(char *src, int start, int end)$/;"	f	file:
+duplicate_player	srcs/map_analyze.c	/^int duplicate_player(char *map_line, t_parser *parser) {$/;"	f
+e_data	headers/cub3d.h	/^  t_data			*e_data;$/;"	m	struct:s_cub
+e_texture	headers/cub3d.h	/^  char				*e_texture;$/;"	m	struct:s_cub
+east	headers/cub3d.h	/^  int east;$/;"	m	struct:s_textures_check
+endian	headers/cub3d.h	/^	int		endian;$/;"	m	struct:s_data
+f_color	headers/cub3d.h	/^  int				f_color[3];$/;"	m	struct:s_cub
+floor	headers/cub3d.h	/^  int floor;$/;"	m	struct:s_textures_check
+font	mlx/mlx_int.h	/^  mlx_img_list_t	*font;$/;"	m	struct:mlx_ptr_s
+font_atlas	mlx/font.c	/^} font_atlas = {$/;"	v	typeref:struct:__anon1	file:
+font_fshader	mlx/mlx_int.h	/^  GLuint	font_fshader;$/;"	m	struct:glsl_info_s
+font_program	mlx/mlx_int.h	/^  GLuint	font_program;$/;"	m	struct:glsl_info_s
+font_vshader	mlx/mlx_int.h	/^  GLuint	font_vshader;$/;"	m	struct:glsl_info_s
+free_and_exit	srcs/free.c	/^void free_and_exit(t_parser *parser, t_cub *cub) {$/;"	f
+free_array	srcs/free.c	/^void free_array(char **array) {$/;"	f
+free_cube	srcs/free.c	/^void free_cube(t_cub *cub) {$/;"	f
+free_parser_memory	srcs/free.c	/^void free_parser_memory(t_parser *parser) {$/;"	f
+freetab	Libft/ft_split.c	/^static void	freetab(char **recipe, int i)$/;"	f	file:
+freetab	Libft/ft_split_slash.c	/^static void	freetab(char **recipe, int i)$/;"	f	file:
+ft_atoi	Libft/ft_atoi.c	/^int	ft_atoi(const char *str)$/;"	f
+ft_bzero	Libft/ft_bzero.c	/^void	ft_bzero(void *s, size_t n)$/;"	f
+ft_bzzero	Libft/get_next_line_utils.c	/^void	ft_bzzero(void *s, size_t n)$/;"	f
+ft_callloc	Libft/get_next_line_utils.c	/^void	*ft_callloc(size_t count, size_t size)$/;"	f
+ft_calloc	Libft/ft_calloc.c	/^void	*ft_calloc(size_t count, size_t size)$/;"	f
+ft_intputchar_fd	Libft/ft_intputchar_fd.c	/^int	ft_intputchar_fd(char c, int fd)$/;"	f
+ft_intputstr_fd	Libft/ft_intputstr_fd.c	/^int	ft_intputstr_fd(char *s, int fd)$/;"	f
+ft_intstrlen	Libft/get_next_line_utils.c	/^int	ft_intstrlen(char *str)$/;"	f
+ft_isalnum	Libft/ft_isalnum.c	/^int	ft_isalnum(int c)$/;"	f
+ft_isalpha	Libft/ft_isalpha.c	/^int	ft_isalpha(int c)$/;"	f
+ft_isascii	Libft/ft_isascii.c	/^int	ft_isascii(int c)$/;"	f
+ft_isdigit	Libft/ft_isdigit.c	/^int	ft_isdigit(int c)$/;"	f
+ft_isprint	Libft/ft_isprint.c	/^int	ft_isprint(int c)$/;"	f
+ft_itoa	Libft/ft_itoa.c	/^char	*ft_itoa(int n)$/;"	f
+ft_join_nextline	Libft/get_next_line_utils.c	/^char	*ft_join_nextline(char *s1, char *s2)$/;"	f
+ft_lstadd_back	Libft/ft_lstadd_back.c	/^void ft_lstadd_back(t_list **lst, t_list *newl) {$/;"	f
+ft_lstadd_front	Libft/ft_lstadd_front.c	/^void ft_lstadd_front(t_list **lst, t_list *newl) {$/;"	f
+ft_lstclear	Libft/ft_lstclear.c	/^void	ft_lstclear(t_list **lst, void (*del)(void *))$/;"	f
+ft_lstdelone	Libft/ft_lstdelone.c	/^void	ft_lstdelone(t_list *lst, void (*del)(void *))$/;"	f
+ft_lstiter	Libft/ft_lstiter.c	/^void	ft_lstiter(t_list *lst, void (*f)(void *))$/;"	f
+ft_lstlast	Libft/ft_lstlast.c	/^t_list	*ft_lstlast(t_list *lst)$/;"	f
+ft_lstmap	Libft/ft_lstmap.c	/^t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))$/;"	f
+ft_lstnew	Libft/ft_lstnew.c	/^t_list	*ft_lstnew(void *content)$/;"	f
+ft_lstsize	Libft/ft_lstsize.c	/^int	ft_lstsize(t_list *lst)$/;"	f
+ft_memchr	Libft/ft_memchr.c	/^void	*ft_memchr(const void *memblock, int searched, size_t size)$/;"	f
+ft_memcmp	Libft/ft_memcmp.c	/^int	ft_memcmp(const void *ptr1, const void *ptr2, size_t size)$/;"	f
+ft_memcpy	Libft/ft_memcpy.c	/^void	*ft_memcpy(void *dest, const void *src, size_t size)$/;"	f
+ft_memmove	Libft/ft_memmove.c	/^void	*ft_memmove(void *dest, const void *src, size_t size)$/;"	f
+ft_memset	Libft/ft_memset.c	/^void	*ft_memset(void *ptr, int value, size_t count)$/;"	f
+ft_printf	Libft/ft_printf.c	/^int	ft_printf(const char *param, ...)$/;"	f
+ft_putarg	Libft/ft_printf.c	/^static int	ft_putarg(char c, va_list ap)$/;"	f	file:
+ft_putchar_fd	Libft/ft_putchar_fd.c	/^void	ft_putchar_fd(char c, int fd)$/;"	f
+ft_putendl_fd	Libft/ft_putendl_fd.c	/^void	ft_putendl_fd(char *s, int fd)$/;"	f
+ft_putnbr_base_fd	Libft/ft_putnbr_base_fd.c	/^int	ft_putnbr_base_fd(long nbr, char *base, int fd)$/;"	f
+ft_putnbr_fd	Libft/ft_putnbr_fd.c	/^void	ft_putnbr_fd(int n, int fd)$/;"	f
+ft_putstr_fd	Libft/ft_putstr_fd.c	/^void	ft_putstr_fd(char *s, int fd)$/;"	f
+ft_sizebase_fd	Libft/ft_sizebase_fd.c	/^int	ft_sizebase_fd(size_t nbr, char *base, int fd)$/;"	f
+ft_split	Libft/ft_split.c	/^char	**ft_split(char const *s, char c)$/;"	f
+ft_split_slash	Libft/ft_split_slash.c	/^char	**ft_split_slash(char const *s, char c)$/;"	f
+ft_strchr	Libft/ft_strchr.c	/^char	*ft_strchr(const char *str, int searched)$/;"	f
+ft_strdup	Libft/ft_strdup.c	/^char	*ft_strdup(const char *str)$/;"	f
+ft_strisdigit	Libft/ft_strisdigit.c	/^int	ft_strisdigit(char *str)$/;"	f
+ft_striteri	Libft/ft_striteri.c	/^void	ft_striteri(char *s, void (*f)(unsigned int, char *))$/;"	f
+ft_strjoin	Libft/ft_strjoin.c	/^char	*ft_strjoin(char const *s1, char const *s2)$/;"	f
+ft_strlcat	Libft/ft_strlcat.c	/^size_t	ft_strlcat(char *dest, const char *src, size_t size)$/;"	f
+ft_strlcpy	Libft/ft_strlcpy.c	/^size_t	ft_strlcpy(char *dest, const char *src, size_t size)$/;"	f
+ft_strlen	Libft/ft_strlen.c	/^size_t	ft_strlen(const char *str)$/;"	f
+ft_strmapi	Libft/ft_strmapi.c	/^char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))$/;"	f
+ft_strncmp	Libft/ft_strncmp.c	/^int	ft_strncmp(const char *str1, const char *str2, size_t length)$/;"	f
+ft_strnstr	Libft/ft_strnstr.c	/^char	*ft_strnstr(const char *big, const char *little, size_t len)$/;"	f
+ft_strrchr	Libft/ft_strrchr.c	/^char	*ft_strrchr(const char *str, int searched)$/;"	f
+ft_strtrim	Libft/ft_strtrim.c	/^char	*ft_strtrim(char const *s1, char const *set)$/;"	f
+ft_substr	Libft/ft_substr.c	/^char	*ft_substr(char const *s, unsigned int start, size_t len)$/;"	f
+ft_tolower	Libft/ft_tolower.c	/^int	ft_tolower(int c)$/;"	f
+ft_toupper	Libft/ft_toupper.c	/^int	ft_toupper(int c)$/;"	f
+func_t	mlx/mlx_int.h	/^typedef int (*func_t)();$/;"	t
+get_file_size	srcs/data.c	/^int get_file_size(int fd, char *av1) {$/;"	f
+get_map_size	srcs/parser.c	/^int get_map_size(t_cub *cub, int i) {$/;"	f
+get_next_line	Libft/get_next_line.c	/^char	*get_next_line(int fd)$/;"	f
+get_pixel_color	srcs/textures.c	/^int		get_pixel_color(t_data *data, int x, int y)$/;"	f
+get_size	Libft/ft_itoa.c	/^static int	get_size(long n)$/;"	f	file:
+getcamerax	srcs/getters.c	/^void	getcamerax(t_cub *cub, int i)$/;"	f
+getdeltadist	srcs/getters.c	/^void	getdeltadist(t_cub *cub)$/;"	f
+getdraw	srcs/getters2.c	/^void	getdraw(t_cub *cub)$/;"	f
+getmapc	srcs/getters.c	/^void	getmapc(t_cub *cub)$/;"	f
+getperpwalldist	srcs/getters2.c	/^void	getperpwalldist(t_cub *cub)$/;"	f
+getplayerdir	srcs/getters.c	/^void	getplayerdir(t_cub *cub)$/;"	f
+getrgb	srcs/getters2.c	/^int	getrgb(int r, int g, int b)$/;"	f
+getstepdist	srcs/getters.c	/^void	getstepdist(t_cub *cub)$/;"	f
+give_line	Libft/get_next_line.c	/^char	*give_line(char *stock, char c)$/;"	f
+glsl_info_s	mlx/mlx_int.h	/^typedef struct	glsl_info_s$/;"	s
+glsl_info_t	mlx/mlx_int.h	/^} glsl_info_t;$/;"	t	typeref:struct:glsl_info_s
+good_texture_format	srcs/errors.c	/^int good_texture_format(char *allowed[6], char **splitted_texture) {$/;"	f
+height	mlx/font.c	/^  unsigned int 	 height;$/;"	m	struct:__anon1	file:
+height	mlx/mlx_int.h	/^  int			height;$/;"	m	struct:mlx_img_list_s
+height	mlx/mlx_png.c	/^  unsigned int	height;$/;"	m	struct:png_info_s	file:
+image_fshader	mlx/mlx_int.h	/^  GLuint	image_fshader;$/;"	m	struct:glsl_info_s
+image_program	mlx/mlx_int.h	/^  GLuint	image_program;$/;"	m	struct:glsl_info_s
+image_vshader	mlx/mlx_int.h	/^  GLuint	image_vshader;$/;"	m	struct:glsl_info_s
+img	headers/cub3d.h	/^	void	*img;$/;"	m	struct:s_data
+img	mlx/mlx_int.h	/^  mlx_img_list_t	*img;$/;"	m	struct:mlx_img_ctx_s
+img_list	mlx/mlx_int.h	/^  mlx_img_ctx_t		*img_list;$/;"	m	struct:mlx_win_list_s
+img_list	mlx/mlx_int.h	/^  mlx_img_list_t	*img_list;$/;"	m	struct:mlx_ptr_s
+initialize_cube	srcs/main.c	/^void initialize_cube(t_cub *cub) {$/;"	f
+initialize_parser	srcs/parser.c	/^void initialize_parser(t_parser *parser) {$/;"	f
+inputs	srcs/inputs.c	/^int	inputs(int key, t_cub *cub)$/;"	f
+interlace	mlx/mlx_png.c	/^  int		interlace;$/;"	m	struct:png_info_s	file:
+is_closing_map	srcs/map_analyze.c	/^int is_closing_map(char **map, t_cub *cub) {$/;"	f
+is_set	Libft/ft_strtrim.c	/^static int	is_set(char c, char const *set)$/;"	f	file:
+itoa_is_neg	Libft/ft_itoa.c	/^static char	*itoa_is_neg(long n)$/;"	f	file:
+itoa_is_pos	Libft/ft_itoa.c	/^static char	*itoa_is_pos(long n)$/;"	f	file:
+line_in_stock	Libft/get_next_line_utils.c	/^int	line_in_stock(char *str)$/;"	f
+line_length	headers/cub3d.h	/^	int		line_length;$/;"	m	struct:s_data
+lineheight	headers/cub3d.h	/^  int				lineheight;$/;"	m	struct:s_cub
+loc_font_atlassize	mlx/mlx_int.h	/^  GLint		loc_font_atlassize;$/;"	m	struct:glsl_info_s
+loc_font_color	mlx/mlx_int.h	/^  GLint		loc_font_color;$/;"	m	struct:glsl_info_s
+loc_font_posinatlas	mlx/mlx_int.h	/^  GLint		loc_font_posinatlas;$/;"	m	struct:glsl_info_s
+loc_font_posinwin	mlx/mlx_int.h	/^  GLint		loc_font_posinwin;$/;"	m	struct:glsl_info_s
+loc_font_position	mlx/mlx_int.h	/^  GLint		loc_font_position;$/;"	m	struct:glsl_info_s
+loc_font_texture	mlx/mlx_int.h	/^  GLint		loc_font_texture;$/;"	m	struct:glsl_info_s
+loc_font_winhalfsize	mlx/mlx_int.h	/^  GLint		loc_font_winhalfsize;$/;"	m	struct:glsl_info_s
+loc_image_pos	mlx/mlx_int.h	/^  GLint		loc_image_pos;$/;"	m	struct:glsl_info_s
+loc_image_position	mlx/mlx_int.h	/^  GLint		loc_image_position;$/;"	m	struct:glsl_info_s
+loc_image_size	mlx/mlx_int.h	/^  GLint		loc_image_size;$/;"	m	struct:glsl_info_s
+loc_image_texture	mlx/mlx_int.h	/^  GLint		loc_image_texture;$/;"	m	struct:glsl_info_s
+loc_image_winhalfsize	mlx/mlx_int.h	/^  GLint		loc_image_winhalfsize;$/;"	m	struct:glsl_info_s
+loc_pixel_position	mlx/mlx_int.h	/^  GLint		loc_pixel_position;$/;"	m	struct:glsl_info_s
+loc_pixel_texture	mlx/mlx_int.h	/^  GLint		loc_pixel_texture;$/;"	m	struct:glsl_info_s
+loc_pixel_winhalfsize	mlx/mlx_int.h	/^  GLint		loc_pixel_winhalfsize;$/;"	m	struct:glsl_info_s
+loop_hook	mlx/mlx_int.h	/^  void			(*loop_hook)(void *);$/;"	m	struct:mlx_ptr_s
+loop_hook_data	mlx/mlx_int.h	/^  void			*loop_hook_data;$/;"	m	struct:mlx_ptr_s
+loop_timer	mlx/mlx_int.h	/^  void			*loop_timer;$/;"	m	struct:mlx_ptr_s
+magic	mlx/mlx_png.c	/^unsigned char magic[PNG_MAGIC_SIZE] = {137, 80, 78, 71, 13, 10, 26, 10};$/;"	v
+main	srcs/main.c	/^int main(int ac, char **av) {$/;"	f
+main_loop_active	mlx/mlx_int.h	/^  int			main_loop_active;$/;"	m	struct:mlx_ptr_s
+map	headers/cub3d.h	/^  char				**map;$/;"	m	struct:s_cub
+map	headers/cub3d.h	/^  char **map;$/;"	m	struct:s_parser
+map_analyze	srcs/map_analyze.c	/^int map_analyze(t_parser *parser, t_cub *cub) {$/;"	f
+map_file	headers/cub3d.h	/^  char				**map_file;$/;"	m	struct:s_cub
+map_height	headers/cub3d.h	/^  int				map_height;$/;"	m	struct:s_cub
+map_line_conformity	srcs/map_analyze.c	/^int map_line_conformity(char *map_line) {$/;"	f
+map_width	headers/cub3d.h	/^  int				map_width;$/;"	m	struct:s_cub
+mapc	headers/cub3d.h	/^  struct s_pointi	mapc;$/;"	m	struct:s_cub	typeref:struct:s_cub::s_pointi
+max_hei	headers/cub3d.h	/^  int				max_hei;$/;"	m	struct:s_cub
+max_wid	headers/cub3d.h	/^  int				max_wid;$/;"	m	struct:s_cub
+mini_floordraw	srcs/minimap.c	/^void	mini_floordraw(t_cub *cub, int *x, int *y)$/;"	f
+mini_voiddraw	srcs/minimap.c	/^void	mini_voiddraw(t_cub *cub, int *x, int *y)$/;"	f
+mini_walldraw	srcs/minimap.c	/^void	mini_walldraw(t_cub *cub, int *x, int *y)$/;"	f
+minimap	headers/cub3d.h	/^  t_data			*minimap;$/;"	m	struct:s_cub
+mipng_crc	mlx/mlx_png.c	/^int	mipng_crc(unsigned char *ptr, int len)$/;"	f
+mipng_data	mlx/mlx_png.c	/^int	mipng_data(mlx_img_list_t *img, unsigned char *dat, png_info_t *pi)$/;"	f
+mipng_defilter	mlx/mlx_png.c	/^unsigned char (*(mipng_defilter[]))(unsigned char *buff, int pos, int a, int b, int c) =$/;"	v
+mipng_defilter_average	mlx/mlx_png.c	/^unsigned char mipng_defilter_average(unsigned char *buff, int pos, int a, int b, int c)$/;"	f
+mipng_defilter_none	mlx/mlx_png.c	/^unsigned char mipng_defilter_none(unsigned char *buff, int pos, int a, int b, int c)$/;"	f
+mipng_defilter_paeth	mlx/mlx_png.c	/^unsigned char mipng_defilter_paeth(unsigned char *buff, int pos, int a, int b, int c)$/;"	f
+mipng_defilter_sub	mlx/mlx_png.c	/^unsigned char mipng_defilter_sub(unsigned char *buff, int pos, int a, int b, int c)$/;"	f
+mipng_defilter_up	mlx/mlx_png.c	/^unsigned char mipng_defilter_up(unsigned char *buff, int pos, int a, int b, int c)$/;"	f
+mipng_err	mlx/mlx_png.c	/^char *(mipng_err[]) =$/;"	v
+mipng_fill_img	mlx/mlx_png.c	/^int	mipng_fill_img(mlx_img_list_t *img, unsigned char *buf, png_info_t *pi)$/;"	f
+mipng_is_type	mlx/mlx_png.c	/^int	mipng_is_type(unsigned char *ptr, char *type)$/;"	f
+mipng_magic	mlx/mlx_png.c	/^int	mipng_magic(unsigned char *ptr, int size)$/;"	f
+mipng_structure	mlx/mlx_png.c	/^int	mipng_structure(unsigned char *ptr, int size, unsigned char **hdr, unsigned char **dat)$/;"	f
+mipng_verif_hdr	mlx/mlx_png.c	/^int	mipng_verif_hdr(unsigned char *hdr, png_info_t *pi)$/;"	f
+mlx	headers/cub3d.h	/^  void				*mlx;$/;"	m	struct:s_cub
+mlx_col_name	mlx/mlx_rgb.c	/^struct s_col_name mlx_col_name[] =$/;"	v	typeref:struct:s_col_name
+mlx_img_ctx_s	mlx/mlx_int.h	/^typedef struct	mlx_img_ctx_s$/;"	s
+mlx_img_ctx_t	mlx/mlx_int.h	/^} mlx_img_ctx_t;$/;"	t	typeref:struct:mlx_img_ctx_s
+mlx_img_list_s	mlx/mlx_int.h	/^typedef struct	mlx_img_list_s$/;"	s
+mlx_img_list_t	mlx/mlx_int.h	/^} mlx_img_list_t;$/;"	t	typeref:struct:mlx_img_list_s
+mlx_int_file_get_rid_comment	mlx/mlx_xpm.c	/^void	mlx_int_file_get_rid_comment(char *ptr, int size)$/;"	f
+mlx_int_get_col_name	mlx/mlx_xpm.c	/^int	mlx_int_get_col_name(char *str,int size)$/;"	f
+mlx_int_get_line	mlx/mlx_xpm.c	/^char	*mlx_int_get_line(char *ptr,int *pos,int size)$/;"	f
+mlx_int_get_text_rgb	mlx/mlx_xpm.c	/^int	mlx_int_get_text_rgb(char *name, char *end)$/;"	f
+mlx_int_parse_png	mlx/mlx_png.c	/^mlx_img_list_t	*mlx_int_parse_png(mlx_ptr_t *xvar, unsigned char *fptr, int size)$/;"	f
+mlx_int_parse_xpm	mlx/mlx_xpm.c	/^void	*mlx_int_parse_xpm(mlx_ptr_t *xvar,void *info,int info_size,char *(*f)())$/;"	f
+mlx_int_static_line	mlx/mlx_xpm.c	/^char	*mlx_int_static_line(char **xpm_data,int *pos,int size)$/;"	f
+mlx_int_str_str	mlx/mlx_int_str_to_wordtab.c	/^int	mlx_int_str_str(char *str,char *find,int len)$/;"	f
+mlx_int_str_str_cote	mlx/mlx_int_str_to_wordtab.c	/^int	mlx_int_str_str_cote(char *str,char *find,int len)$/;"	f
+mlx_int_str_to_wordtab	mlx/mlx_int_str_to_wordtab.c	/^char	**mlx_int_str_to_wordtab(char *str)$/;"	f
+mlx_int_xpm_set_pixel	mlx/mlx_xpm.c	/^void	mlx_int_xpm_set_pixel(mlx_img_list_t *img, char *data, int opp, int col, int x)$/;"	f
+mlx_png_file_to_image	mlx/mlx_png.c	/^void	*mlx_png_file_to_image(mlx_ptr_t *xvar, char *file, int *width, int *height)$/;"	f
+mlx_ptr_s	mlx/mlx_int.h	/^typedef struct		mlx_ptr_s$/;"	s
+mlx_ptr_t	mlx/mlx_int.h	/^} mlx_ptr_t;$/;"	t	typeref:struct:mlx_ptr_s
+mlx_shaders	mlx/mlx_shaders.c	/^int mlx_shaders(glsl_info_t *glsl)$/;"	f
+mlx_shaders_font	mlx/mlx_shaders.c	/^int mlx_shaders_font(glsl_info_t *glsl)$/;"	f
+mlx_shaders_image	mlx/mlx_shaders.c	/^int mlx_shaders_image(glsl_info_t *glsl)$/;"	f
+mlx_shaders_pixel	mlx/mlx_shaders.c	/^int mlx_shaders_pixel(glsl_info_t *glsl)$/;"	f
+mlx_win_list_s	mlx/mlx_int.h	/^typedef struct	mlx_win_list_s$/;"	s
+mlx_win_list_t	mlx/mlx_int.h	/^} mlx_win_list_t;$/;"	t	typeref:struct:mlx_win_list_s
+mlx_xpm_file_to_image	mlx/mlx_xpm.c	/^void	*mlx_xpm_file_to_image(mlx_ptr_t *xvar,char *file,int *width,int *height)$/;"	f
+mlx_xpm_to_image	mlx/mlx_xpm.c	/^void	*mlx_xpm_to_image(mlx_ptr_t *xvar,char **xpm_data,int *width,int *height)$/;"	f
+mlximg	headers/cub3d.h	/^  t_data			mlximg;$/;"	m	struct:s_cub
+mlxsetup	srcs/movements.c	/^void	mlxsetup(t_cub *cub)$/;"	f
+mlxwin	headers/cub3d.h	/^  void				*mlxwin;$/;"	m	struct:s_cub
+mouse_input	srcs/rotatemouse.c	/^int	mouse_input(t_cub *cub)$/;"	f
+movedown	srcs/movements.c	/^void	movedown(t_cub *cub)$/;"	f
+moveleft	srcs/movements.c	/^void	moveleft(t_cub *cub)$/;"	f
+moveright	srcs/movements.c	/^void	moveright(t_cub *cub)$/;"	f
+movespeed	headers/cub3d.h	/^  float				movespeed;$/;"	m	struct:s_cub
+moveup	srcs/movements.c	/^void	moveup(t_cub *cub)$/;"	f
+my_mlx_pixel_put	srcs/inputs.c	/^void	my_mlx_pixel_put(t_data *data, int x, int y, int color)$/;"	f
+n_data	headers/cub3d.h	/^  t_data			*n_data;$/;"	m	struct:s_cub
+n_texture	headers/cub3d.h	/^  char				*n_texture;$/;"	m	struct:s_cub
+name	mlx/mlx_xpm.c	/^  char  *name;$/;"	m	struct:s_col_name	file:
+name	mlx/mlx_xpm.c	/^  int           name;$/;"	m	struct:s_xpm_col	file:
+nb_flush	mlx/mlx_int.h	/^  int			nb_flush;$/;"	m	struct:mlx_win_list_s
+nb_of_file_lines	headers/cub3d.h	/^  unsigned int		nb_of_file_lines;$/;"	m	struct:s_cub
+next	Libft/libft.h	/^  struct s_list *next;$/;"	m	struct:s_list	typeref:struct:s_list::s_list
+next	mlx/mlx_int.h	/^  struct mlx_img_ctx_s	*next;$/;"	m	struct:mlx_img_ctx_s	typeref:struct:mlx_img_ctx_s::mlx_img_ctx_s
+next	mlx/mlx_int.h	/^  struct mlx_img_list_s	*next;$/;"	m	struct:mlx_img_list_s	typeref:struct:mlx_img_list_s::mlx_img_list_s
+next	mlx/mlx_int.h	/^  struct mlx_win_list_s	*next;$/;"	m	struct:mlx_win_list_s	typeref:struct:mlx_win_list_s::mlx_win_list_s
+north	headers/cub3d.h	/^  int north;$/;"	m	struct:s_textures_check
+orient	headers/cub3d.h	/^  char orient;$/;"	m	struct:s_parser
+p	headers/cub3d.h	/^  struct			s_point p;$/;"	m	struct:s_cub	typeref:struct:s_cub::s_point
+p_orient	headers/cub3d.h	/^  char				p_orient;$/;"	m	struct:s_cub
+parse_map_format	srcs/errors.c	/^int parse_map_format(t_cub *cub) {$/;"	f
+pdir	headers/cub3d.h	/^  struct s_point	pdir;$/;"	m	struct:s_cub	typeref:struct:s_cub::s_point
+perpwalldist	headers/cub3d.h	/^  float				perpwalldist;$/;"	m	struct:s_cub
+pixel_data	mlx/font.c	/^  unsigned char	 pixel_data[1140 * 20 * 4 + 1];$/;"	m	struct:__anon1	file:
+pixel_fshader	mlx/mlx_int.h	/^  GLuint	pixel_fshader;$/;"	m	struct:glsl_info_s
+pixel_program	mlx/mlx_int.h	/^  GLuint	pixel_program;$/;"	m	struct:glsl_info_s
+pixel_vshader	mlx/mlx_int.h	/^  GLuint	pixel_vshader;$/;"	m	struct:glsl_info_s
+pixmgt	mlx/mlx_int.h	/^  int			pixmgt;$/;"	m	struct:mlx_win_list_s
+plane	headers/cub3d.h	/^  struct s_point	plane;$/;"	m	struct:s_cub	typeref:struct:s_cub::s_point
+playerdir	srcs/getters2.c	/^void	playerdir(int x, int y, t_cub *cub)$/;"	f
+plusminus	Libft/ft_putnbr_base_fd.c	/^static int	plusminus(char *str)$/;"	f	file:
+plusminus	Libft/ft_sizebase_fd.c	/^static int	plusminus(char *str)$/;"	f	file:
+png_info_s	mlx/mlx_png.c	/^typedef struct png_info_s$/;"	s	file:
+png_info_t	mlx/mlx_png.c	/^} png_info_t;$/;"	t	typeref:struct:png_info_s	file:
+print_map	srcs/data.c	/^void print_map(char **map) {$/;"	f
+put_minimap	srcs/minimap.c	/^void	put_minimap(t_cub *cub)$/;"	f
+put_player_minimap	srcs/minimap.c	/^void	put_player_minimap(t_cub *cub)$/;"	f
+putpixel	srcs/drawline.c	/^void	putpixel(t_cub *cub)$/;"	f
+raydir	headers/cub3d.h	/^  struct s_point	raydir;$/;"	m	struct:s_cub	typeref:struct:s_cub::s_point
+readbuff_copystock	Libft/get_next_line.c	/^char	*readbuff_copystock(int fd, char *stock)$/;"	f
+rotateleft	srcs/rotatemouse.c	/^void	rotateleft(t_cub *cub)$/;"	f
+rotateright	srcs/rotatemouse.c	/^void	rotateright(t_cub *cub)$/;"	f
+rotspeed	headers/cub3d.h	/^  float				rotspeed;$/;"	m	struct:s_cub
+s_col_name	mlx/mlx_xpm.c	/^struct  s_col_name$/;"	s	file:
+s_cub	headers/cub3d.h	/^typedef struct s_cub {$/;"	s
+s_data	headers/cub3d.h	/^  t_data			*s_data;$/;"	m	struct:s_cub
+s_data	headers/cub3d.h	/^typedef struct	s_data {$/;"	s
+s_list	Libft/libft.h	/^typedef struct s_list {$/;"	s
+s_parser	headers/cub3d.h	/^typedef struct s_parser {$/;"	s
+s_point	headers/cub3d.h	/^typedef struct s_point {$/;"	s
+s_pointi	headers/cub3d.h	/^typedef struct s_pointi {$/;"	s
+s_texture	headers/cub3d.h	/^  char				*s_texture;$/;"	m	struct:s_cub
+s_textures_check	headers/cub3d.h	/^typedef struct s_textures_check {$/;"	s
+s_xpm_col	mlx/mlx_xpm.c	/^typedef struct  s_xpm_col$/;"	s	file:
+side	headers/cub3d.h	/^  char				side;$/;"	m	struct:s_cub
+sidedist	headers/cub3d.h	/^  struct s_point	sidedist;$/;"	m	struct:s_cub	typeref:struct:s_cub::s_point
+south	headers/cub3d.h	/^  int south;$/;"	m	struct:s_textures_check
+splitcount	Libft/ft_split.c	/^static int	splitcount(const char *str, char c)$/;"	f	file:
+splitcount	Libft/ft_split_slash.c	/^static int	splitcount(const char *str, char c)$/;"	f	file:
+splitter	Libft/ft_split.c	/^char	**splitter(char const *s, char c, char **recipe)$/;"	f
+splitter	Libft/ft_split_slash.c	/^static char	**splitter(char const *s, char c, char **recipe)$/;"	f	file:
+squarejumper	srcs/main.c	/^void	squarejumper(t_cub *cub)$/;"	f
+step	headers/cub3d.h	/^  struct s_point	step;$/;"	m	struct:s_cub	typeref:struct:s_cub::s_point
+store_parser_data	srcs/parser.c	/^void store_parser_data(t_parser *parser, t_cub *cub) {$/;"	f
+t_cub	headers/cub3d.h	/^} t_cub;$/;"	t	typeref:struct:s_cub
+t_data	headers/cub3d.h	/^}				t_data;$/;"	t	typeref:struct:s_data
+t_list	Libft/libft.h	/^} t_list;$/;"	t	typeref:struct:s_list
+t_parser	headers/cub3d.h	/^} t_parser;$/;"	t	typeref:struct:s_parser
+t_point	headers/cub3d.h	/^} t_point;$/;"	t	typeref:struct:s_point
+t_pointi	headers/cub3d.h	/^} t_pointi;$/;"	t	typeref:struct:s_pointi
+t_texchek	headers/cub3d.h	/^} t_texchek;$/;"	t	typeref:struct:s_textures_check
+t_xpm_col	mlx/mlx_xpm.c	/^} t_xpm_col;$/;"	t	typeref:struct:s_xpm_col	file:
+tex	headers/cub3d.h	/^  struct s_pointi	tex;$/;"	m	struct:s_cub	typeref:struct:s_cub::s_pointi
+tex_paths	headers/cub3d.h	/^  char *tex_paths[4];$/;"	m	struct:s_parser
+texpos	headers/cub3d.h	/^  float				texpos;$/;"	m	struct:s_cub
+texstep	headers/cub3d.h	/^  float				texstep;$/;"	m	struct:s_cub
+texture	mlx/mlx_int.h	/^  GLuint		texture;$/;"	m	struct:mlx_img_ctx_s
+textures	headers/cub3d.h	/^  char ***textures;$/;"	m	struct:s_parser
+tmp_p	headers/cub3d.h	/^  int tmp_p;$/;"	m	struct:s_parser
+valid_paths_and_color_format	srcs/parser.c	/^int valid_paths_and_color_format(t_parser *parser, t_cub *cub) {$/;"	f
+vbuffer	mlx/mlx_int.h	/^  GLuint		vbuffer;$/;"	m	struct:mlx_img_ctx_s
+vertexes	mlx/mlx_int.h	/^  GLfloat		vertexes[8];$/;"	m	struct:mlx_img_list_s
+w_data	headers/cub3d.h	/^  t_data			*w_data;$/;"	m	struct:s_cub
+w_texture	headers/cub3d.h	/^  char				*w_texture;$/;"	m	struct:s_cub
+wall	headers/cub3d.h	/^  int				wall;$/;"	m	struct:s_cub
+wall_in_the_way	srcs/map_analyze.c	/^int wall_in_the_way(char **map, int i, int j) {$/;"	f
+wallx	headers/cub3d.h	/^  float				wallx;$/;"	m	struct:s_cub
+west	headers/cub3d.h	/^  int west;$/;"	m	struct:s_textures_check
+width	mlx/font.c	/^  unsigned int 	 width;$/;"	m	struct:__anon1	file:
+width	mlx/mlx_int.h	/^  int			width;$/;"	m	struct:mlx_img_list_s
+width	mlx/mlx_png.c	/^  unsigned int	width;$/;"	m	struct:png_info_s	file:
+win_list	mlx/mlx_int.h	/^  mlx_win_list_t	*win_list;$/;"	m	struct:mlx_ptr_s
+winid	mlx/mlx_int.h	/^  void			*winid;$/;"	m	struct:mlx_win_list_s
+x	headers/cub3d.h	/^	int		x;$/;"	m	struct:s_data
+x	headers/cub3d.h	/^  float	x;$/;"	m	struct:s_point
+x	headers/cub3d.h	/^  int				x;$/;"	m	struct:s_cub
+x	headers/cub3d.h	/^  int	x;$/;"	m	struct:s_pointi
+xpm_to_img	srcs/textures.c	/^void	xpm_to_img(t_cub *cub)$/;"	f
+y	headers/cub3d.h	/^	int		y;$/;"	m	struct:s_data
+y	headers/cub3d.h	/^  float	y;$/;"	m	struct:s_point
+y	headers/cub3d.h	/^  int				y;$/;"	m	struct:s_cub
+y	headers/cub3d.h	/^  int	y;$/;"	m	struct:s_pointi
