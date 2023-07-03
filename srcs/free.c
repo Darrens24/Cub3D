@@ -78,6 +78,7 @@ void free_cube(t_cub *cub) {
   free(cub->door3->img);
   free(cub->door3->addr);
   free(cub->door3);
+  free(cub->mlx);
   free(cub);
-  system("leaks cub3D");
+  /* system("leaks cub3d"); */
 }

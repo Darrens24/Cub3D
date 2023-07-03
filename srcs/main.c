@@ -62,10 +62,9 @@ if (cub->valid)
 	mlx_put_image_to_window(cub->mlx, cub->mlxwin, cub->mlximg->img, 0, 0);
 	put_minimap(cub);
 	printf("pixel door is %d\n", get_pixel_color(cub->current_door, 30, 30));
-	/* mlx_loop_hook(cub->mlx, NULL, NULL); */
-	mlx_hook(cub->mlxwin, 17, 1L<<17, destroy, cub); 
-	mlx_hook(cub->mlxwin, 2, 1L<<0, inputs, cub); 
 	mlx_loop_hook(cub->mlx, *mouse_input, cub);
+	mlx_hook(cub->mlxwin, 2, 1L<<0, inputs, cub); 
+	mlx_hook(cub->mlxwin, 17, 1L<<17, destroy, cub); 
 	mlx_loop(cub->mlx);
 }
 destroy(cub);

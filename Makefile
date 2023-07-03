@@ -50,6 +50,7 @@ $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
 
 $(NAME): $(OBJS)
 	@echo ${LIGHTBLUE}Libft compiling !${NOCOLOR}
+	@make -C ./mlx
 	@make -C ./Libft
 	@echo ${LIGHTBLUE}$(NAME) compiling !${NOCOLOR}
 	@$(CC) $(CFLAGS) -Imlx -framework OpenGL -framework AppKit $(OBJS) -o $@ ./Libft/libft.a mlx/libmlx.a
