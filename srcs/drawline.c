@@ -6,11 +6,27 @@
 /*   By: pfaria-d <pfaria-d@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/28 14:22:07 by pfaria-d          #+#    #+#             */
-/*   Updated: 2023/07/03 18:41:28 by pfaria-d         ###   ########.fr       */
+/*   Updated: 2023/07/03 19:50:39 by pfaria-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../headers/cub3d.h"
+
+static int	printer(t_cub *cub, int i, int y, t_data *data)
+{
+	while (++y < cub->drawend)
+	{
+		cub->tex.y = (int)cub->texpos & (64 - 1);
+		cub->texpos += cub->texstep;
+		if (cub->door == 1)
+			my_mlx_pixel_put(cub->mlximg, i, y,
+				get_pixel_color(cub->current_door, cub->tex.x, cub->tex.y));
+		else
+			my_mlx_pixel_put(cub->mlximg, i, y,
+				get_pixel_color(data, cub->tex.x, cub->tex.y));
+	}
+	return (y);
+}
 
 void	drawline(int i, t_cub *cub)
 {
@@ -18,50 +34,20 @@ void	drawline(int i, t_cub *cub)
 
 	y = 0;
 	while (y < cub->drawstart)
-		my_mlx_pixel_put(cub->mlximg, i, y++, getrgb(cub->c_color[0], cub->c_color[1], cub->c_color[2]));
+		my_mlx_pixel_put(cub->mlximg, i, y++,
+			getrgb(cub->c_color[0], cub->c_color[1], cub->c_color[2]));
 	y = cub->drawstart - 1;
 	if (cub->side == 1 && cub->p.y < cub->mapc.y)
-		while (++y < cub->drawend)
-		{
-			cub->tex.y = (int)cub->texpos & (64 - 1);
-			cub->texpos += cub->texstep;
-			if (cub->door == 1)
-				my_mlx_pixel_put(cub->mlximg, i, y, get_pixel_color(cub->current_door, cub->tex.x, cub->tex.y));
-			else
-				my_mlx_pixel_put(cub->mlximg, i, y, get_pixel_color(cub->e_data, cub->tex.x, cub->tex.y));
-		}
+		y = printer(cub, i, y, cub->e_data);
 	else if (cub->side == 1 && cub->p.y > cub->mapc.y)
-		while (++y < cub->drawend)
-		{
-			cub->tex.y = (int)cub->texpos & (64 - 1);
-			cub->texpos += cub->texstep;
-			if (cub->door == 1)
-				my_mlx_pixel_put(cub->mlximg, i, y, get_pixel_color(cub->current_door, cub->tex.x, cub->tex.y));
-			else
-				my_mlx_pixel_put(cub->mlximg, i, y, get_pixel_color(cub->w_data, cub->tex.x, cub->tex.y));
-		}
+		y = printer(cub, i, y, cub->w_data);
 	else if (cub->side == 0 && cub->p.x < cub->mapc.x)
-		while (++y < cub->drawend)
-		{
-			cub->tex.y = (int)cub->texpos & (64 - 1);
-			cub->texpos += cub->texstep;
-			if (cub->door == 1)
-				my_mlx_pixel_put(cub->mlximg, i, y, get_pixel_color(cub->current_door, cub->tex.x, cub->tex.y));
-			else
-				my_mlx_pixel_put(cub->mlximg, i, y, get_pixel_color(cub->s_data, cub->tex.x, cub->tex.y));
-		}
+		y = printer(cub, i, y, cub->s_data);
 	else 
-		while (++y < cub->drawend)
-		{
-			cub->tex.y = (int)cub->texpos & (64 - 1);
-			cub->texpos += cub->texstep;
-			if (cub->door == 1)
-				my_mlx_pixel_put(cub->mlximg, i, y, get_pixel_color(cub->current_door, cub->tex.x, cub->tex.y));
-			else
-				my_mlx_pixel_put(cub->mlximg, i, y, get_pixel_color(cub->n_data, cub->tex.x, cub->tex.y));
-		}
+		y = printer(cub, i, y, cub->n_data);
 	while (y < cub->map_height)
-		my_mlx_pixel_put(cub->mlximg, i, y++, getrgb(cub->f_color[0], cub->f_color[1], cub->f_color[2]));
+		my_mlx_pixel_put(cub->mlximg, i, y++, getrgb(cub->f_color[0],
+				cub->f_color[1], cub->f_color[2]));
 }
 
 void	putpixel(t_cub *cub)
