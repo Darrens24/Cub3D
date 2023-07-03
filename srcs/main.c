@@ -9,6 +9,7 @@ void initialize_cube(t_cub *cub) {
   cub->n_texture = NULL;
 	cub->movespeed = 0.2;
 	cub->rotspeed = 0.05;
+	cub->done = 0;
 }
 
 void	squarejumper(t_cub *cub)
@@ -47,8 +48,8 @@ cub->minimap = malloc(sizeof(t_data));
 cub->mlximg = malloc(sizeof(t_data));
 if (!download_map(cub, av[1]) || !parse_map_format(cub))
 	return (free(cub), -1);
-cub->map_width = 1280;
-cub->map_height = 960;
+cub->map_width = 800;
+cub->map_height = 500;
 mlxsetup(cub);
 cub->p.x += 0.1;
 cub->p.y += 0.1;
@@ -57,6 +58,7 @@ getplayerdir(cub);
 putpixel(cub);
 mlx_put_image_to_window(cub->mlx, cub->mlxwin, cub->mlximg->img, 0, 0);
 put_minimap(cub);
+printf("pixel door is %d\n", get_pixel_color(cub->current_door, 30, 30));
 /* mlx_loop_hook(cub->mlx, NULL, NULL); */
 mlx_hook(cub->mlxwin, 17, 1L<<17, destroy, cub); 
 mlx_hook(cub->mlxwin, 2, 1L<<0, inputs, cub); 

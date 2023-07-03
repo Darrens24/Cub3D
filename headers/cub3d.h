@@ -100,12 +100,14 @@ typedef struct s_cub {
   t_data			*minimap;
   int				max_wid;
   int				max_hei;
+  t_data			*current_door;
   t_data			*door0;
   t_data			*door1;
   t_data			*door2;
   t_data			*door3;
   int				door;
   struct s_point	door_pos;
+  int				done;
 } t_cub;
 
 /***\ errors \***/

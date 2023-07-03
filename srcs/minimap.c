@@ -129,6 +129,8 @@ void	put_minimap(t_cub *cub)
 		{
 			if (cub->map[i][j] == '0')
 				mini_floordraw(cub, &x, &y);
+			/* else if (cub->map[i][j] == 'D') */
+			/* 	mini_doordraw(cub, &x, &y); */
 			else
 				mini_walldraw(cub, &x, &y);
 

@@ -6,7 +6,7 @@
 /*   By: pfaria-d <pfaria-d@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/28 16:31:58 by pfaria-d          #+#    #+#             */
-/*   Updated: 2023/07/01 16:33:15 by eleleux          ###   ########.fr       */
+/*   Updated: 2023/07/03 10:51:51 by eleleux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,16 +30,17 @@ void	door_to_img(t_cub *cub)
 	cub->door1 = malloc(sizeof(t_data));
 	cub->door2 = malloc(sizeof(t_data));
 	cub->door3 = malloc(sizeof(t_data));
+	cub->current_door = malloc(sizeof(t_data));
 
 	cub->door0->img = mlx_xpm_file_to_image(cub->mlx, "./textures/Closedoor.xpm", &cub->door0->x, &cub->door0->y);
 	cub->door0->addr = mlx_get_data_addr(cub->door0->img, &cub->door0->bits_per_pixel, &cub->door0->line_length, &cub->door0->endian);
-	/* cub->door1->img = mlx_xpm_file_to_image(cub->mlx, "./textures/Semiopen1.xpm", &cub->door1->x, &cub->door1->y); */
-	/* cub->door1->addr = mlx_get_data_addr(cub->door1->img, &cub->door1->bits_per_pixel, &cub->door1->line_length, &cub->door1->endian); */
-	/* cub->door2->img = mlx_xpm_file_to_image(cub->mlx, "./textures/Semiopen2.xpm", &cub->door2->x, &cub->door2->y); */
-	/* cub->door2->addr = mlx_get_data_addr(cub->door2->img, &cub->door2->bits_per_pixel, &cub->door2->line_length, &cub->door2->endian); */
-	/* cub->door3->img = mlx_xpm_file_to_image(cub->mlx, "./textures/Opendoor.xpm", &cub->door3->x, &cub->door3->y); */
-	/* cub->door3->addr = mlx_get_data_addr(cub->door3->img, &cub->door3->bits_per_pixel, &cub->door3->line_length, &cub->door3->endian); */
-
+	cub->door1->img = mlx_xpm_file_to_image(cub->mlx, "./textures/Semiopen1.xpm", &cub->door1->x, &cub->door1->y);
+	cub->door1->addr = mlx_get_data_addr(cub->door1->img, &cub->door1->bits_per_pixel, &cub->door1->line_length, &cub->door1->endian);
+	cub->door2->img = mlx_xpm_file_to_image(cub->mlx, "./textures/Semiopen2.xpm", &cub->door2->x, &cub->door2->y);
+	cub->door2->addr = mlx_get_data_addr(cub->door2->img, &cub->door2->bits_per_pixel, &cub->door2->line_length, &cub->door2->endian);
+	cub->door3->img = mlx_xpm_file_to_image(cub->mlx, "./textures/Opendoor.xpm", &cub->door3->x, &cub->door3->y);
+	cub->door3->addr = mlx_get_data_addr(cub->door3->img, &cub->door3->bits_per_pixel, &cub->door3->line_length, &cub->door3->endian);
+	cub->current_door = cub->door0;
 }
 
 void	xpm_to_img(t_cub *cub)
