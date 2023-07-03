@@ -136,9 +136,8 @@ void free_cube(t_cub *cub);
 int parse_map_format(t_cub *cub);
 void initialize_parser(t_parser *parser);
 void store_parser_data(t_parser *parser, t_cub *cub);
-int check_store_color_format(char mode, t_cub *cub, int colors[3],
-                             char **texture);
-int check_store_path_format(t_cub *cub, int j, char *paths[4], char **texture);
+int cscf(char mode, t_cub *cub, int colors[3], char **texture);
+int cspf(t_cub *cub, int j, char *paths[4], char **texture);
 
 /***\ map analyze \***/
 
