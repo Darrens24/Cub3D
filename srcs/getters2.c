@@ -6,7 +6,7 @@
 /*   By: pfaria-d <pfaria-d@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/28 14:14:52 by pfaria-d          #+#    #+#             */
-/*   Updated: 2023/07/03 18:40:22 by pfaria-d         ###   ########.fr       */
+/*   Updated: 2023/07/03 19:44:35 by eleleux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,11 @@ void	getdraw(t_cub *cub)
 int	getrgb(int r, int g, int b)
 {
 	return (r << 16 | g << 8 | b);
+}
+
+int	create_trgb(int t, int r, int g, int b)
+{
+	return (t << 24 | r << 16 | g << 8 | b);
 }
 
 void	playerdir(int x, int y, t_cub *cub)

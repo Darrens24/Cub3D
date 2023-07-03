@@ -192,6 +192,7 @@ void	putpixel(t_cub *cub);
 
 void	xpm_to_img(t_cub *cub);
 int		get_pixel_color(t_data *data, int x, int y);
+int		create_trgb(int t, int r, int g, int b);
 
 /***\ friendless \***/
 

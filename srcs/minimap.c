@@ -1,14 +1,21 @@
-#include "../headers/cub3d.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   minimap.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: eleleux <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/07/03 19:33:02 by eleleux           #+#    #+#             */
+/*   Updated: 2023/07/03 19:45:05 by eleleux          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int	create_trgb(int t, int r, int g, int b)
-{
-	return (t << 24 | r << 16 | g << 8 | b);
-}
+#include "../headers/cub3d.h"
 
 void	mini_walldraw(t_cub *cub, int *x, int *y)
 {
-	int i;
-	int j;
+	int	i;
+	int	j;
 
 	i = 0;
 	j = 0;
@@ -17,7 +24,6 @@ void	mini_walldraw(t_cub *cub, int *x, int *y)
 		j = 0;
 		while (j < 10)
 		{
-			/* printf("mini %p\n x %d\n y%d\ncolor%d\n", cub->minimap, *x, *y, create_trgb(50, 88, 41, 0)); */
 			my_mlx_pixel_put(cub->minimap, *x, *y, create_trgb(0, 0, 0, 0));
 			*x += 1;
 			j++;
@@ -30,8 +36,8 @@ void	mini_walldraw(t_cub *cub, int *x, int *y)
 
 void	mini_floordraw(t_cub *cub, int *x, int *y)
 {
-	int i;
-	int j;
+	int	i;
+	int	j;
 
 	i = 0;
 	j = 0;
@@ -40,8 +46,8 @@ void	mini_floordraw(t_cub *cub, int *x, int *y)
 		j = 0;
 		while (j < 10)
 		{
-			/* printf("mini %p\n x %d\n y%d\ncolor%d\n", cub->minimap, *x, *y, create_trgb(50, 88, 41, 0)); */
-			my_mlx_pixel_put(cub->minimap, *x, *y, create_trgb(90, 225, 198, 153));
+			my_mlx_pixel_put(cub->minimap, *x, *y,
+				create_trgb(90, 225, 198, 153));
 			*x += 1;
 			j++;
 		}
@@ -50,44 +56,13 @@ void	mini_floordraw(t_cub *cub, int *x, int *y)
 		i++;
 	}
 }
-
-void	mini_voiddraw(t_cub *cub, int *x, int *y)
-{
-	int i;
-	int j;
-	(void)cub;
-
-	i = 0;
-	j = 0;
-	while (i < 10)
-	{
-		j = 0;
-		while (j < 10)
-		{
-			/* printf("mini %p\n x %d\n y%d\ncolor%d\n", cub->minimap, *x, *y, create_trgb(50, 88, 41, 0)); */
-			/* my_mlx_pixel_put(cub->minimap, *x, *y, create_trgb(100, 225, 198, 153)); */
-			*x += 1;
-			j++;
-		}
-		*x -= 10;
-		*y += 1;
-		i++;
-	}
-}
-
-/* void	mini_floordraw(t_cub *cub, int *x, int *y) */
-/* { */
-/* 	(void) cub, x, y; */
-
-/* 	return; */
-/* } */
 
 void	put_player_minimap(t_cub *cub)
 {
-	int i;
-	int j;
-	int x;
-	int y;
+	int	i;
+	int	j;
+	int	x;
+	int	y;
 
 	i = 0;
 	j = 0;
@@ -98,8 +73,8 @@ void	put_player_minimap(t_cub *cub)
 		j = 0;
 		while (j < 5)
 		{
-			/* printf("mini %p\n x %d\n y%d\ncolor%d\n", cub->minimap, *x, *y, create_trgb(50, 88, 41, 0)); */
-			my_mlx_pixel_put(cub->minimap, x, y, create_trgb(90, 255, 0, 0));
+			my_mlx_pixel_put(cub->minimap, x, y,
+				create_trgb(90, 255, 0, 0));
 			x++;
 			j++;
 		}
@@ -109,19 +84,12 @@ void	put_player_minimap(t_cub *cub)
 	}
 }
 
-void	put_minimap(t_cub *cub)
+void	draw_minimap(t_cub *cub, int x, int y)
 {
 	int	i;
 	int	j;
-	int x;
-	int y;
 
 	i = 0;
-	j = 0;
-	x = 0;
-	y = 0;
-	cub->minimap->img = mlx_new_image(cub->mlx, cub->max_wid * 10, cub->max_hei * 10);
-	cub->minimap->addr = mlx_get_data_addr(cub->minimap->img, &cub->minimap->bits_per_pixel, &cub->minimap->line_length, &cub->minimap->endian);
 	while (cub->map[i])
 	{
 		j = 0;
@@ -129,11 +97,8 @@ void	put_minimap(t_cub *cub)
 		{
 			if (cub->map[i][j] == '0')
 				mini_floordraw(cub, &x, &y);
-			/* else if (cub->map[i][j] == 'D') */
-			/* 	mini_doordraw(cub, &x, &y); */
 			else
 				mini_walldraw(cub, &x, &y);
-
 			y -= 10;
 			x += 10;
 			j++;
@@ -142,6 +107,25 @@ void	put_minimap(t_cub *cub)
 		x = 0;
 		i++;
 	}
+}
+
+void	put_minimap(t_cub *cub)
+{
+	int	i;
+	int	j;
+	int	x;
+	int	y;
+
+	i = 0;
+	j = 0;
+	x = 0;
+	y = 0;
+	cub->minimap->img = mlx_new_image(cub->mlx, cub->max_wid * 10,
+			cub->max_hei * 10);
+	cub->minimap->addr = mlx_get_data_addr(cub->minimap->img,
+			&cub->minimap->bits_per_pixel, &cub->minimap->line_length,
+			&cub->minimap->endian);
+	draw_minimap(cub, x, y);
 	put_player_minimap(cub);
 	mlx_put_image_to_window(cub->mlx, cub->mlxwin, cub->minimap->img, 0, 0);
 }
