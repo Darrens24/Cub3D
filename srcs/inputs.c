@@ -6,7 +6,7 @@
 /*   By: pfaria-d <pfaria-d@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/28 14:20:29 by pfaria-d          #+#    #+#             */
-/*   Updated: 2023/07/03 18:04:05 by pfaria-d         ###   ########.fr       */
+/*   Updated: 2023/07/03 18:17:19 by eleleux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,11 @@ void	my_mlx_pixel_put(t_data *data, int x, int y, int color)
 
 int	destroy(t_cub *cub)
 {
+	free_cube(cub);
 	mlx_clear_window(cub->mlx, cub->mlxwin);
 	mlx_destroy_window(cub->mlx, cub->mlxwin);
+	  free(cub->mlx);
+	/* system("leaks cub3D"); */
 	exit(0);
 }
 
@@ -84,10 +87,6 @@ int	update_frame_open(t_cub *cub)
 		frame = 0;
 		cub->done = 1;
 	}
-	/* else */
-	/* { */
-		/* cub->map[(int)cub->door_pos.y][(int)cub->door_pos.x] = '0'; */
-	/* } */
 	return (0);
 }
 
@@ -164,14 +163,6 @@ void	clozdoor(t_cub *cub)
 	cub->done = 0;
 	if (cub->done == 0 && cub->map[(int)cub->door_pos.y][(int)cub->door_pos.x] == '0')
 	{
-		/* cub->done = 1; */
-		/* mlx_destroy_image(cub->mlx, cub->mlximg->img); */
-		/* cub->mlximg->img = mlx_new_image(cub->mlx, cub->map_width, cub->map_height); */
-		/* cub->mlximg->addr = mlx_get_data_addr(cub->mlximg->img, &cub->mlximg->bits_per_pixel, &cub->mlximg->line_length, &cub->mlximg->endian); */
-		/* putpixel(cub); */
-		/* mlx_put_image_to_window(cub->mlx, cub->mlxwin, cub->mlximg->img, 0, 0); */
-		/* mlx_destroy_image(cub->mlx, cub->minimap->img); */
-		/* put_minimap(cub); */
 		printf("HEY WE CLOSE\n");
 		mlx_loop_hook(cub->mlx, *update_frame_close, cub);
 	}
@@ -180,8 +171,6 @@ void	clozdoor(t_cub *cub)
 
 void	hodoor(t_cub *cub)
 {
-	/* static int frame; */
-
 	printf("x diff is %f\ny diff is %f\n", absolute(cub->door_pos.x - cub->p.y), absolute(cub->door_pos.y - cub->p.x));
 	if (absolute(cub->door_pos.x - cub->p.y) > 3 || absolute(cub->door_pos.y - cub->p.x) > 2)
 		return ;
@@ -191,7 +180,6 @@ void	hodoor(t_cub *cub)
 		printf("HEY WE OPEN\n");
 		mlx_loop_hook(cub->mlx, *update_frame_open, cub);
 	}
-	/* cub->done = 0; */
 	printf("HODOOOOR\n");
 }
 

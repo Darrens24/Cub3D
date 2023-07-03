@@ -48,37 +48,5 @@ void free_cube(t_cub *cub) {
   free(cub->w_texture);
   free(cub->s_texture);
   free(cub->n_texture);
-  free(cub->e_data->img);
-  free(cub->e_data->addr);
-  free(cub->e_data);
-  free(cub->w_data->img);
-  free(cub->w_data->addr);
-  free(cub->w_data);
-  free(cub->n_data->img);
-  free(cub->n_data->addr);
-  free(cub->n_data);
-  free(cub->s_data->img);
-  free(cub->s_data->addr);
-  free(cub->s_data);
-  free(cub->mlximg->img);
-  free(cub->mlximg->addr);
-  free(cub->mlximg);
-  free(cub->minimap->img);
-  free(cub->minimap->addr);
-  free(cub->minimap);
-  free(cub->door0->img);
-  free(cub->door0->addr);
-  free(cub->door0);
-  free(cub->door1->img);
-  free(cub->door1->addr);
-  free(cub->door1);
-  free(cub->door2->img);
-  free(cub->door2->addr);
-  free(cub->door2);
-  free(cub->door3->img);
-  free(cub->door3->addr);
-  free(cub->door3);
-  free(cub->mlx);
-  free(cub);
-  /* system("leaks cub3d"); */
+  mlx_destroy_image(cub->mlx, cub->mlximg);
 }
