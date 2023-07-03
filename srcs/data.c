@@ -6,7 +6,7 @@
 /*   By: pfaria-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/03 18:47:06 by pfaria-d          #+#    #+#             */
-/*   Updated: 2023/07/03 18:50:13 by pfaria-d         ###   ########.fr       */
+/*   Updated: 2023/07/03 19:57:47 by eleleux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,5 +64,34 @@ int	download_map(t_cub *cub, char *av1)
 	while (++i < cub->nb_of_file_lines)
 		cub->map_file[i] = get_next_line(fd);
 	cub->map_file[i] = NULL;
+	return (TRUE);
+}
+
+int	is_closing_map(char **map, t_cub *cub)
+{
+	int	i;
+	int	j;
+
+	i = 0;
+	j = 0;
+	while (map[i])
+	{
+		j = 0;
+		while (map[i][j])
+		{
+			if (map[i][j] == 'E' || map[i][j] == 'W' || map[i][j] == 'N'
+					|| map[i][j] == 'S')
+			{
+				cub->p.x = i;
+				cub->p.y = j;
+				map[i][j] = '0';
+			}
+			if (map[i][j] == '0')
+				if (!wall_in_the_way(map, i, j))
+					return (FALSE);
+			j++;
+		}
+		i++;
+	}
 	return (TRUE);
 }
