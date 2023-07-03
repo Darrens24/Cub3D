@@ -6,7 +6,7 @@
 /*   By: pfaria-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/03 19:04:37 by pfaria-d          #+#    #+#             */
-/*   Updated: 2023/07/03 19:29:14 by eleleux          ###   ########.fr       */
+/*   Updated: 2023/07/03 19:38:16 by pfaria-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int	good_texture_format(char *allowed[6], char **splitted_texture)
 			return (FALSE);
 		}
 		if (ft_strncmp(splitted_texture[0], allowed[i],
-					ft_strlen(splitted_texture[0])) == 0)
+				ft_strlen(splitted_texture[0])) == 0)
 		{
 			return (TRUE);
 		}
@@ -41,11 +41,11 @@ int	good_texture_format(char *allowed[6], char **splitted_texture)
 	return (FALSE);
 }
 
-int cspf(t_cub *cub, int j, char *paths[4], char **texture)
+int	cspf(t_cub *cub, int j, char *paths[4], char **texture)
 {
 	int	fd;
-	(void)cub;
 
+	(void)cub;
 	paths[j] = ft_strtrim(texture[1], "\n");
 	fd = open(paths[j], O_RDONLY);
 	if (fd < 0)
@@ -66,7 +66,7 @@ int cspf(t_cub *cub, int j, char *paths[4], char **texture)
 	return (TRUE);
 }
 
-int cscf(char mode, t_cub *cub, int colors[3], char **texture)
+int	cscf(char mode, t_cub *cub, int colors[3], char **texture)
 {
 	int		i;
 	int		j;
@@ -86,8 +86,8 @@ int cscf(char mode, t_cub *cub, int colors[3], char **texture)
 	}
 	coma_splitted_color = ft_split(temp, ',');
 	free(temp);
-	if (!coma_splitted_color[1] || !coma_splitted_color[2] ||
-			coma_splitted_color[3])
+	if (!coma_splitted_color[1] || !coma_splitted_color[2]
+		|| coma_splitted_color[3])
 		return (free_array(coma_splitted_color), FALSE);
 	j = -1;
 	while (coma_splitted_color[++j])
@@ -126,8 +126,8 @@ int	check_if_all_textures(t_parser *parser)
 		else if (ft_strncmp(parser->textures[i][0], "C", 1) == 0)
 			check.ceil = 1;
 	}
-	if (check.ceil != 1 || check.floor != 1 || check.west != 1 ||
-			check.east != 1 || check.north != 1 || check.south != 1)
+	if (check.ceil != 1 || check.floor != 1 || check.west != 1
+		|| check.east != 1 || check.north != 1 || check.south != 1)
 	{
 		printf("Error\nMap needs [EAST][WEST][SOUTH][NORTH][FLOOR][CEIL]\n");
 		return (FALSE);
