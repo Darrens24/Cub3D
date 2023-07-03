@@ -6,7 +6,7 @@
 /*   By: pfaria-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/03 19:04:37 by pfaria-d          #+#    #+#             */
-/*   Updated: 2023/07/03 19:15:51 by pfaria-d         ###   ########.fr       */
+/*   Updated: 2023/07/03 19:29:14 by eleleux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int	good_texture_format(char *allowed[6], char **splitted_texture)
 	return (FALSE);
 }
 
-int check_store_path_format(t_cub *cub, int j, char *paths[4], char **texture)
+int cspf(t_cub *cub, int j, char *paths[4], char **texture)
 {
 	int	fd;
 	(void)cub;
@@ -66,8 +66,7 @@ int check_store_path_format(t_cub *cub, int j, char *paths[4], char **texture)
 	return (TRUE);
 }
 
-int check_store_color_format(char mode, t_cub *cub, int colors[3],
-                             char **texture)
+int cscf(char mode, t_cub *cub, int colors[3], char **texture)
 {
 	int		i;
 	int		j;
