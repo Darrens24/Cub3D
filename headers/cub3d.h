@@ -108,6 +108,7 @@ typedef struct s_cub {
   int				door;
   struct s_point	door_pos;
   int				done;
+  int				valid;
 } t_cub;
 
 /***\ errors \***/

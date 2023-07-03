@@ -6,7 +6,7 @@
 /*   By: pfaria-d <pfaria-d@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/28 14:20:29 by pfaria-d          #+#    #+#             */
-/*   Updated: 2023/07/03 15:56:03 by eleleux          ###   ########.fr       */
+/*   Updated: 2023/07/03 16:59:46 by eleleux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,10 @@ void	my_mlx_pixel_put(t_data *data, int x, int y, int color)
 
 int	destroy(t_cub *cub)
 {
+	mlx_destroy_image(cub->mlx, cub->minimap);
 	mlx_clear_window(cub->mlx, cub->mlxwin);
 	mlx_destroy_window(cub->mlx, cub->mlxwin);
+	free_cube(cub);
 	exit(0);
 }
 

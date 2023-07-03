@@ -10,6 +10,7 @@ void initialize_cube(t_cub *cub) {
 	cub->movespeed = 0.2;
 	cub->rotspeed = 0.05;
 	cub->done = 0;
+	cub->valid = 1;
 }
 
 void	squarejumper(t_cub *cub)
@@ -54,16 +55,19 @@ mlxsetup(cub);
 cub->p.x += 0.1;
 cub->p.y += 0.1;
 xpm_to_img(cub);
-getplayerdir(cub);
-putpixel(cub);
-mlx_put_image_to_window(cub->mlx, cub->mlxwin, cub->mlximg->img, 0, 0);
-put_minimap(cub);
-printf("pixel door is %d\n", get_pixel_color(cub->current_door, 30, 30));
-/* mlx_loop_hook(cub->mlx, NULL, NULL); */
-mlx_hook(cub->mlxwin, 17, 1L<<17, destroy, cub); 
-mlx_hook(cub->mlxwin, 2, 1L<<0, inputs, cub); 
-mlx_loop_hook(cub->mlx, *mouse_input, cub);
-mlx_loop(cub->mlx);
-free_cube(cub);
+if (cub->valid)
+{
+	getplayerdir(cub);
+	putpixel(cub);
+	mlx_put_image_to_window(cub->mlx, cub->mlxwin, cub->mlximg->img, 0, 0);
+	put_minimap(cub);
+	printf("pixel door is %d\n", get_pixel_color(cub->current_door, 30, 30));
+	/* mlx_loop_hook(cub->mlx, NULL, NULL); */
+	mlx_hook(cub->mlxwin, 17, 1L<<17, destroy, cub); 
+	mlx_hook(cub->mlxwin, 2, 1L<<0, inputs, cub); 
+	mlx_loop_hook(cub->mlx, *mouse_input, cub);
+	mlx_loop(cub->mlx);
+}
+destroy(cub);
 return (0);
 }
