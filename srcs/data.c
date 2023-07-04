@@ -6,7 +6,7 @@
 /*   By: pfaria-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/03 18:47:06 by pfaria-d          #+#    #+#             */
-/*   Updated: 2023/07/03 19:57:47 by eleleux          ###   ########.fr       */
+/*   Updated: 2023/07/04 10:26:00 by pfaria-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,5 +93,59 @@ int	is_closing_map(char **map, t_cub *cub)
 		}
 		i++;
 	}
+	return (TRUE);
+}
+
+int	parse_map_format(t_cub *cub)
+{
+	t_parser	*parser;
+	int			i;
+
+	parser = malloc(sizeof(t_parser));
+	initialize_parser(parser);
+	store_parser_data(parser, cub);
+	if (map_analyze(parser, cub) == FALSE)
+	{
+		printf("Error\nBad map format\n");
+		free_parser_memory(parser);
+		return (FALSE);
+	}
+	cub->map = malloc(sizeof(char *) * (cub->map_height + 1));
+	if (!cub->map)
+	{
+		free_parser_memory(parser);
+		return (FALSE);
+	}
+	i = -1;
+	while (parser->map[++i])
+		cub->map[i] = ft_strtrim(parser->map[i], "\n");
+	cub->map[i] = NULL;
+	free_parser_memory(parser);
+	free_array(cub->map_file);
+	return (TRUE);
+}
+
+int	cspf(t_cub *cub, int j, char *paths[4], char **texture)
+{
+	int	fd;
+
+	(void)cub;
+	paths[j] = ft_strtrim(texture[1], "\n");
+	fd = open(paths[j], O_RDONLY);
+	if (fd < 0)
+	{
+		free(paths[j]);
+		return (perror("open"), FALSE);
+	}
+	if (ft_strncmp(texture[0], "EA", 3) == 0)
+		cub->e_texture = ft_strdup(paths[j]);
+	else if (ft_strncmp(texture[0], "WE", 3) == 0)
+		cub->w_texture = ft_strdup(paths[j]);
+	else if (ft_strncmp(texture[0], "NO", 3) == 0)
+		cub->n_texture = ft_strdup(paths[j]);
+	else if (ft_strncmp(texture[0], "SO", 3) == 0)
+		cub->s_texture = ft_strdup(paths[j]);
+	free(paths[j]);
+	close(fd);
 	return (TRUE);
 }

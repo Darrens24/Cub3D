@@ -6,7 +6,7 @@
 /*   By: pfaria-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/03 19:04:37 by pfaria-d          #+#    #+#             */
-/*   Updated: 2023/07/03 19:38:16 by pfaria-d         ###   ########.fr       */
+/*   Updated: 2023/07/04 10:27:38 by pfaria-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,31 +39,6 @@ int	good_texture_format(char *allowed[6], char **splitted_texture)
 		}
 	}
 	return (FALSE);
-}
-
-int	cspf(t_cub *cub, int j, char *paths[4], char **texture)
-{
-	int	fd;
-
-	(void)cub;
-	paths[j] = ft_strtrim(texture[1], "\n");
-	fd = open(paths[j], O_RDONLY);
-	if (fd < 0)
-	{
-		free(paths[j]);
-		return (perror("open"), FALSE);
-	}
-	if (ft_strncmp(texture[0], "EA", 3) == 0)
-		cub->e_texture = ft_strdup(paths[j]);
-	else if (ft_strncmp(texture[0], "WE", 3) == 0)
-		cub->w_texture = ft_strdup(paths[j]);
-	else if (ft_strncmp(texture[0], "NO", 3) == 0)
-		cub->n_texture = ft_strdup(paths[j]);
-	else if (ft_strncmp(texture[0], "SO", 3) == 0)
-		cub->s_texture = ft_strdup(paths[j]);
-	free(paths[j]);
-	close(fd);
-	return (TRUE);
 }
 
 int	cscf(char mode, t_cub *cub, int colors[3], char **texture)
@@ -105,6 +80,17 @@ int	cscf(char mode, t_cub *cub, int colors[3], char **texture)
 	return (free_array(coma_splitted_color), TRUE);
 }
 
+int	checker(t_texchek check)
+{
+	if (check.ceil != 1 || check.floor != 1 || check.west != 1
+		|| check.east != 1 || check.north != 1 || check.south != 1)
+	{
+		printf("Error\nMap needs [EAST][WEST][SOUTH][NORTH][FLOOR][CEIL]\n");
+		return (TRUE);
+	}
+	return (FALSE);
+}
+
 int	check_if_all_textures(t_parser *parser)
 {
 	int			i;
@@ -126,40 +112,7 @@ int	check_if_all_textures(t_parser *parser)
 		else if (ft_strncmp(parser->textures[i][0], "C", 1) == 0)
 			check.ceil = 1;
 	}
-	if (check.ceil != 1 || check.floor != 1 || check.west != 1
-		|| check.east != 1 || check.north != 1 || check.south != 1)
-	{
-		printf("Error\nMap needs [EAST][WEST][SOUTH][NORTH][FLOOR][CEIL]\n");
+	if (checker(check))
 		return (FALSE);
-	}
-	return (TRUE);
-}
-
-int	parse_map_format(t_cub *cub)
-{
-	t_parser	*parser;
-	int			i;
-
-	parser = malloc(sizeof(t_parser));
-	initialize_parser(parser);
-	store_parser_data(parser, cub);
-	if (map_analyze(parser, cub) == FALSE)
-	{
-		printf("Error\nBad map format\n");
-		free_parser_memory(parser);
-		return (FALSE);
-	}
-	cub->map = malloc(sizeof(char *) * (cub->map_height + 1));
-	if (!cub->map)
-	{
-		free_parser_memory(parser);
-		return (FALSE);
-	}
-	i = -1;
-	while (parser->map[++i])
-		cub->map[i] = ft_strtrim(parser->map[i], "\n");
-	cub->map[i] = NULL;
-	free_parser_memory(parser);
-	free_array(cub->map_file);
 	return (TRUE);
 }
