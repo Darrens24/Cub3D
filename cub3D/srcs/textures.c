@@ -6,7 +6,7 @@
 /*   By: pfaria-d <pfaria-d@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/28 16:31:58 by pfaria-d          #+#    #+#             */
-/*   Updated: 2023/07/03 18:37:17 by eleleux          ###   ########.fr       */
+/*   Updated: 2023/07/04 11:05:25 by eleleux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,4 +106,24 @@ void	xpm_to_img(t_cub *cub)
 		exit(printf("Error\nTexture error\n"));
 	}
 	norm_xpm(cub);
+}
+
+int	good_texture_format(char *allowed[6], char **splitted_texture)
+{
+	int	i;
+
+	i = -1;
+	while (++i < 6)
+	{
+		if (splitted_texture[1] == NULL || splitted_texture[2] != NULL)
+		{
+			return (FALSE);
+		}
+		if (ft_strncmp(splitted_texture[0], allowed[i],
+				ft_strlen(splitted_texture[0])) == 0)
+		{
+			return (TRUE);
+		}
+	}
+	return (FALSE);
 }

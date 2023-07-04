@@ -6,7 +6,7 @@
 /*   By: pfaria-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/03 19:04:37 by pfaria-d          #+#    #+#             */
-/*   Updated: 2023/07/04 10:27:38 by pfaria-d         ###   ########.fr       */
+/*   Updated: 2023/07/04 11:05:28 by eleleux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,30 +21,30 @@ int	correct_file_extension(char *name)
 	return (TRUE);
 }
 
-int	good_texture_format(char *allowed[6], char **splitted_texture)
+int	verify_comas(t_cub *cub, char **coma_splitted_color,
+		int colors[3], char mode)
 {
-	int	i;
+	int	j;
 
-	i = -1;
-	while (++i < 6)
+	j = -1;
+	while (coma_splitted_color[++j])
 	{
-		if (splitted_texture[1] == NULL || splitted_texture[2] != NULL)
-		{
+		if (ft_strlen(coma_splitted_color[j]) > 3)
 			return (FALSE);
-		}
-		if (ft_strncmp(splitted_texture[0], allowed[i],
-				ft_strlen(splitted_texture[0])) == 0)
-		{
-			return (TRUE);
-		}
+		colors[j] = ft_atoi(coma_splitted_color[j]);
+		if (colors[j] < 0 || colors[j] > 255)
+			return (FALSE);
+		if (mode == 'c')
+			cub->c_color[j] = colors[j];
+		else if (mode == 'f')
+			cub->f_color[j] = colors[j];
 	}
-	return (FALSE);
+	return (TRUE);
 }
 
 int	cscf(char mode, t_cub *cub, int colors[3], char **texture)
 {
 	int		i;
-	int		j;
 	char	**coma_splitted_color;
 	char	*temp;
 	int		coma;
@@ -64,19 +64,8 @@ int	cscf(char mode, t_cub *cub, int colors[3], char **texture)
 	if (!coma_splitted_color[1] || !coma_splitted_color[2]
 		|| coma_splitted_color[3])
 		return (free_array(coma_splitted_color), FALSE);
-	j = -1;
-	while (coma_splitted_color[++j])
-	{
-		if (ft_strlen(coma_splitted_color[j]) > 3)
-			return (free_array(coma_splitted_color), FALSE);
-		colors[j] = ft_atoi(coma_splitted_color[j]);
-		if (colors[j] < 0 || colors[j] > 255)
-			return (free_array(coma_splitted_color), FALSE);
-		if (mode == 'c')
-			cub->c_color[j] = colors[j];
-		else if (mode == 'f')
-			cub->f_color[j] = colors[j];
-	}
+	if (!verify_comas(cub, coma_splitted_color, colors, mode))
+		return (free_array(coma_splitted_color), FALSE);
 	return (free_array(coma_splitted_color), TRUE);
 }
 
