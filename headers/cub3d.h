@@ -194,9 +194,18 @@ void	xpm_to_img(t_cub *cub);
 int		get_pixel_color(t_data *data, int x, int y);
 int		create_trgb(int t, int r, int g, int b);
 
-/***\ friendless \***/
+/***\ utils \***/
 
 void	squarejumper(t_cub *cub);
 void	put_minimap(t_cub *cub);
+float	absolute(float diff);
+void	refresh_images(t_cub *cub);
+
+/***\ door \***/
+
+int	update_frame_open(t_cub *cub);
+int	update_frame_close(t_cub *cub);
+void	clozdoor(t_cub *cub);
+void	hodoor(t_cub *cub);
 
 #endif
