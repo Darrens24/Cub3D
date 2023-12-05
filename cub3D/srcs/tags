@@ -1,0 +1,65 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+absolute	inputs.c	/^static float	absolute(float diff)$/;"	f	file:
+check_if_all_textures	errors.c	/^int check_if_all_textures(t_parser *parser) {$/;"	f
+check_store_color_format	errors.c	/^int check_store_color_format(char mode, t_cub *cub, int colors[3],$/;"	f
+check_store_path_format	errors.c	/^int check_store_path_format(t_cub *cub, int j, char *paths[4], char **texture) {$/;"	f
+correct_file_extension	errors.c	/^int correct_file_extension(char *name) {$/;"	f
+create_trgb	minimap.c	/^int	create_trgb(int t, int r, int g, int b)$/;"	f
+destroy	inputs.c	/^int	destroy(t_cub *cub)$/;"	f
+door_conformity	map_analyze.c	/^int door_conformity(char **map, t_cub *cub)$/;"	f
+door_to_img	textures.c	/^void	door_to_img(t_cub *cub)$/;"	f
+download_map	data.c	/^int download_map(t_cub *cub, char *av1) {$/;"	f
+drawline	drawline.c	/^void	drawline(int i, t_cub *cub)$/;"	f
+duplicate_player	map_analyze.c	/^int duplicate_player(char *map_line, t_parser *parser) {$/;"	f
+free_and_exit	free.c	/^void free_and_exit(t_parser *parser, t_cub *cub) {$/;"	f
+free_array	free.c	/^void free_array(char **array) {$/;"	f
+free_cube	free.c	/^void free_cube(t_cub *cub) {$/;"	f
+free_parser_memory	free.c	/^void free_parser_memory(t_parser *parser) {$/;"	f
+get_file_size	data.c	/^int get_file_size(int fd, char *av1) {$/;"	f
+get_map_size	parser.c	/^int get_map_size(t_cub *cub, int i) {$/;"	f
+get_pixel_color	textures.c	/^int		get_pixel_color(t_data *data, int x, int y)$/;"	f
+getcamerax	getters.c	/^void	getcamerax(t_cub *cub, int i)$/;"	f
+getdeltadist	getters.c	/^void	getdeltadist(t_cub *cub)$/;"	f
+getdraw	getters2.c	/^void	getdraw(t_cub *cub)$/;"	f
+getmapc	getters.c	/^void	getmapc(t_cub *cub)$/;"	f
+getperpwalldist	getters2.c	/^void	getperpwalldist(t_cub *cub)$/;"	f
+getplayerdir	getters.c	/^void	getplayerdir(t_cub *cub)$/;"	f
+getrgb	getters2.c	/^int	getrgb(int r, int g, int b)$/;"	f
+getstepdist	getters.c	/^void	getstepdist(t_cub *cub)$/;"	f
+good_texture_format	errors.c	/^int good_texture_format(char *allowed[6], char **splitted_texture) {$/;"	f
+hodoor	inputs.c	/^void	hodoor(t_cub *cub)$/;"	f
+initialize_cube	main.c	/^void initialize_cube(t_cub *cub) {$/;"	f
+initialize_parser	parser.c	/^void initialize_parser(t_parser *parser) {$/;"	f
+inputs	inputs.c	/^int	inputs(int key, t_cub *cub)$/;"	f
+is_closing_map	map_analyze.c	/^int is_closing_map(char **map, t_cub *cub) {$/;"	f
+main	main.c	/^int main(int ac, char **av) {$/;"	f
+map_analyze	map_analyze.c	/^int map_analyze(t_parser *parser, t_cub *cub) {$/;"	f
+map_line_conformity	map_analyze.c	/^int map_line_conformity(char *map_line) {$/;"	f
+mini_floordraw	minimap.c	/^void	mini_floordraw(t_cub *cub, int *x, int *y)$/;"	f
+mini_voiddraw	minimap.c	/^void	mini_voiddraw(t_cub *cub, int *x, int *y)$/;"	f
+mini_walldraw	minimap.c	/^void	mini_walldraw(t_cub *cub, int *x, int *y)$/;"	f
+mlxsetup	movements.c	/^void	mlxsetup(t_cub *cub)$/;"	f
+mouse_input	rotatemouse.c	/^int	mouse_input(t_cub *cub)$/;"	f
+movedown	movements.c	/^void	movedown(t_cub *cub)$/;"	f
+moveleft	movements.c	/^void	moveleft(t_cub *cub)$/;"	f
+moveright	movements.c	/^void	moveright(t_cub *cub)$/;"	f
+moveup	movements.c	/^void	moveup(t_cub *cub)$/;"	f
+my_mlx_pixel_put	inputs.c	/^void	my_mlx_pixel_put(t_data *data, int x, int y, int color)$/;"	f
+parse_map_format	errors.c	/^int parse_map_format(t_cub *cub) {$/;"	f
+playerdir	getters2.c	/^void	playerdir(int x, int y, t_cub *cub)$/;"	f
+print_map	data.c	/^void print_map(char **map) {$/;"	f
+put_minimap	minimap.c	/^void	put_minimap(t_cub *cub)$/;"	f
+put_player_minimap	minimap.c	/^void	put_player_minimap(t_cub *cub)$/;"	f
+putpixel	drawline.c	/^void	putpixel(t_cub *cub)$/;"	f
+rotateleft	rotatemouse.c	/^void	rotateleft(t_cub *cub)$/;"	f
+rotateright	rotatemouse.c	/^void	rotateright(t_cub *cub)$/;"	f
+squarejumper	main.c	/^void	squarejumper(t_cub *cub)$/;"	f
+store_parser_data	parser.c	/^void store_parser_data(t_parser *parser, t_cub *cub) {$/;"	f
+valid_paths_and_color_format	parser.c	/^int valid_paths_and_color_format(t_parser *parser, t_cub *cub) {$/;"	f
+wall_in_the_way	map_analyze.c	/^int wall_in_the_way(char **map, int i, int j) {$/;"	f
+xpm_to_img	textures.c	/^void	xpm_to_img(t_cub *cub)$/;"	f

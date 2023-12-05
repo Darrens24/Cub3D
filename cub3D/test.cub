@@ -1,0 +1,14 @@
+EA ./textures/Chocoeastsquare.xpm
+NO ./textures/Choconorthsquare.xpm
+SO ./textures/Chocosouth.xpm
+F 88,41,0
+C 225,198,153
+
+WE ./textures/Chocowest.xpm
+
+111111111111
+10101010101011
+11100000000S11
+11111110000001
+11111000010001 
+    1111111111
