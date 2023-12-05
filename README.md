@@ -50,8 +50,6 @@ Welcome to the `Cub3D` project, inspired by the world-famous historic game "Wolf
 - **Arrow keys**: Rotate the viewpoint.
 - **ESC**: Exit the game.
 
-## Technical Discussion
-
 ### Ray-Casting Algorithm
 
 Ray-casting is implemented to calculate the distance to walls and render them correctly. This algorithm was meticulously optimized for performance and accuracy, ensuring a smooth gaming experience.
