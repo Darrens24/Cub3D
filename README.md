@@ -28,7 +28,7 @@ Welcome to the `Cub3D` project, inspired by the world-famous historic game "Wolf
 
 1. Clone the repository:
     ```sh
-    git clone [repo-link]
+    git clone https://github.com/Darrens24/Cub3D.git
     ```
 
 2. Enter the directory and compile:
